@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SasqluGNHLluYC7OBD5KT0cszvsHUbbxsT6FIhUMVc4=",
+  "Source": "MStore.AdminAPI",
+  "BasePath": "_content/MStore.AdminAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

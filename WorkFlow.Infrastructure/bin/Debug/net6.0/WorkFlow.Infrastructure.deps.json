@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WorkFlow.Infrastructure/1.0.0": {
+        "runtime": {
+          "WorkFlow.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WorkFlow.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "d7CHp4Y0ua6xtFtKvUUerotz7l+RLKbvod462eqnppQ=",
+  "Source": "MStore.WebAPI",
+  "BasePath": "_content/MStore.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

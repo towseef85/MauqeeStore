@@ -1,0 +1,15 @@
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\bin\Debug\net6.0\MStore.Application.deps.json
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\bin\Debug\net6.0\MStore.Application.dll
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\bin\Debug\net6.0\MStore.Application.pdb
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\MStore.Application.csproj.AssemblyReference.cache
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\MStore.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\MStore.Application.AssemblyInfoInputs.cache
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\MStore.Application.AssemblyInfo.cs
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\MStore.Application.csproj.CoreCompileInputs.cache
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\MStore.Application.dll
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\refint\MStore.Application.dll
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\MStore.Application.pdb
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\ref\MStore.Application.dll
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\bin\Debug\net6.0\MStore.Domain.dll
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\bin\Debug\net6.0\MStore.Domain.pdb
+D:\Projects_22-23\MauqeeStore\Backend\MStore\MStore.Application\obj\Debug\net6.0\MStore.Application.csproj.CopyComplete

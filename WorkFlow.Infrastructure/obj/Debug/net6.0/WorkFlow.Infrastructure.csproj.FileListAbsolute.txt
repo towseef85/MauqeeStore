@@ -1,0 +1,12 @@
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\bin\Debug\net6.0\WorkFlow.Infrastructure.deps.json
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\bin\Debug\net6.0\WorkFlow.Infrastructure.dll
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\bin\Debug\net6.0\WorkFlow.Infrastructure.pdb
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\obj\Debug\net6.0\WorkFlow.Infrastructure.csproj.AssemblyReference.cache
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\obj\Debug\net6.0\WorkFlow.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\obj\Debug\net6.0\WorkFlow.Infrastructure.AssemblyInfoInputs.cache
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\obj\Debug\net6.0\WorkFlow.Infrastructure.AssemblyInfo.cs
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\obj\Debug\net6.0\WorkFlow.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\obj\Debug\net6.0\WorkFlow.Infrastructure.dll
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\obj\Debug\net6.0\refint\WorkFlow.Infrastructure.dll
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\obj\Debug\net6.0\WorkFlow.Infrastructure.pdb
+D:\Projects_22-23\MauqeeStore\Backend\MStore\WorkFlow.Infrastructure\obj\Debug\net6.0\ref\WorkFlow.Infrastructure.dll
