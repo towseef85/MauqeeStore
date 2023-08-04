@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MStore.Application\MStore.Application.csproj" />
-    <ProjectReference Include="..\WorkFlow.Persistence\WorkFlow.Persistence.csproj" />
+    <ProjectReference Include="..\MStore.Persistence\MStore.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

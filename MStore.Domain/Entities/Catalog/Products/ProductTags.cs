@@ -8,6 +8,7 @@ namespace MStore.Domain.Entities.Catalog.Products
 {
     public class ProductTags : BaseEntity
     {
+        public Guid SubscriptionId { get; set; }
         public string EngName { get; set; }
         public string OtherName { get; set; }
         public Guid ProductId { get; set; }

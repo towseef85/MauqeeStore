@@ -1,0 +1,12 @@
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\bin\Debug\net6.0\MStore.Infrastructure.deps.json
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\bin\Debug\net6.0\MStore.Infrastructure.dll
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\bin\Debug\net6.0\MStore.Infrastructure.pdb
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\obj\Debug\net6.0\MStore.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\obj\Debug\net6.0\MStore.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\obj\Debug\net6.0\MStore.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\obj\Debug\net6.0\MStore.Infrastructure.AssemblyInfo.cs
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\obj\Debug\net6.0\MStore.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\obj\Debug\net6.0\MStore.Infrastructure.dll
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\obj\Debug\net6.0\refint\MStore.Infrastructure.dll
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\obj\Debug\net6.0\MStore.Infrastructure.pdb
+C:\Users\Towseef\Documents\Testing\MauqeeStore\backend\WorkFlow.Infrastructure\obj\Debug\net6.0\ref\MStore.Infrastructure.dll

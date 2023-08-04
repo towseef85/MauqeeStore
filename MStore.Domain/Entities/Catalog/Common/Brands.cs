@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace MStore.Domain.Entities.Catalog.Common
 {
-    public class Brands : BaseEntity
+    public class Brand : BaseEntity
     {
+        public Guid SubscriptionId { get; set; }
         public string EngName { get; set; }
         public string? OtherName { get; set; }
         public string Description { get; set; }
         public bool Published { get; set; } = true;
-        public string? ImageId { get; set; }
+        public string? ImageData { get; set; }
         public bool ShowOnHomepage { get; set; } = false;
         public int? DisplayOrder { get; set; }
         public ICollection<Product> Products { get; set; }

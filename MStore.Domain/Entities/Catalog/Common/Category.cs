@@ -1,4 +1,5 @@
 ﻿using MStore.Domain.Entities.Catalog.Products;
+using MStore.Domain.Entities.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace MStore.Domain.Entities.Catalog.Common
 {
     public class Category : BaseEntity 
     {
+        public Guid SubscriptionId { get; set; }
         public string EngName { get; set; }
         public string? OtherName { get; set; }
         public string? MetaKeywords { get; set; }
@@ -20,5 +22,6 @@ namespace MStore.Domain.Entities.Catalog.Common
         public bool Published { get; set; } = true;
         public int? DisplayOrder { get; set; }
         public ICollection<Product> Products { get; set; }
+        public virtual Subscription Subscriptions { get; set; }
     }
 }

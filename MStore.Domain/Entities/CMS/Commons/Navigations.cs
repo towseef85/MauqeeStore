@@ -8,6 +8,7 @@ namespace MStore.Domain.Entities.CMS.Commons
 {
     public class Navigation : BaseEntity
     {
+        public Guid SubscriptionId { get; set; }
         public string EngName { get; set; }
         public string OtherName { get; set; }
         public int DisplayOrder { get; set; }

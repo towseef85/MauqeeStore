@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MStore.WebAPI.props" />
+</Project>

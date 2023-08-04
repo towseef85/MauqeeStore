@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using MStore.Domain.Entities.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,9 @@ namespace MStore.Domain.Entities.Identities
 
         public string UserType { get; set; }
         public string Remarks { get; set; }
+        public Guid SubscriptionId { get; set; }
+        public Subscription Subscriptions { get; set; }
+
 
     }
 }

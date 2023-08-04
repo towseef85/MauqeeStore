@@ -9,7 +9,6 @@ namespace MStore.Domain.Entities
     public class BaseEntity
     {
         public Guid Id { get; set; }
-        public Guid SubscriptionId { get; set; }
         public DateTime? CreatedDate { get; set; }
         //public virtual string CreatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MStore.AdminAPI.props" />
+</Project>

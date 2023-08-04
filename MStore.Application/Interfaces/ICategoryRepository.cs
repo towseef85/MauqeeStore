@@ -1,10 +1,4 @@
-﻿using MStore.Application.Core;
-using MStore.Application.Dtos.CatalogDtos.Category;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MStore.Application.Dtos.CatalogDtos.Category;
 
 namespace MStore.Application.Interfaces
 {

@@ -9,10 +9,10 @@
       "MStore.AdminAPI/1.0.0": {
         "dependencies": {
           "MStore.Application": "1.0.0",
+          "MStore.Persistence": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.18",
           "Microsoft.EntityFrameworkCore.Design": "6.0.18",
-          "Swashbuckle.AspNetCore": "6.2.3",
-          "WorkFlow.Persistence": "1.0.0"
+          "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
           "MStore.AdminAPI.dll": {}
@@ -658,7 +658,7 @@
           "MStore.Domain.dll": {}
         }
       },
-      "WorkFlow.Persistence/1.0.0": {
+      "MStore.Persistence/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "MStore.Application": "1.0.0",
@@ -668,7 +668,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.18"
         },
         "runtime": {
-          "WorkFlow.Persistence.dll": {}
+          "MStore.Persistence.dll": {}
         }
       }
     }
@@ -1130,7 +1130,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "WorkFlow.Persistence/1.0.0": {
+    "MStore.Persistence/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
