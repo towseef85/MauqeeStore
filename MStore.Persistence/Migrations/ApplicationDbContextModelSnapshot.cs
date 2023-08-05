@@ -199,7 +199,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands");
+                    b.ToTable("Brands", (string)null);
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Common.Category", b =>
@@ -257,7 +257,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("SubscriptionId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.Product", b =>
@@ -350,7 +350,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductAttribute", b =>
@@ -387,7 +387,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("ProductAttributeCombinationId");
 
-                    b.ToTable("ProductAttributes");
+                    b.ToTable("ProductAttributes", (string)null);
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductAttributeCombination", b =>
@@ -439,7 +439,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductAttributeCombinations");
+                    b.ToTable("ProductAttributeCombinations", (string)null);
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductAttributeValue", b =>
@@ -482,7 +482,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("ProductAttributeId");
 
-                    b.ToTable("ProductAttributeValues");
+                    b.ToTable("ProductAttributeValues", (string)null);
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductTags", b =>
@@ -519,7 +519,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductTags");
+                    b.ToTable("ProductTags", (string)null);
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.CMS.Commons.Navigation", b =>
@@ -560,7 +560,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Navigations");
+                    b.ToTable("Navigations", (string)null);
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Identities.AppUsers", b =>
@@ -669,7 +669,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Plans");
+                    b.ToTable("Plans", (string)null);
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Subscriptions.Subscription", b =>
@@ -712,7 +712,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("PlanId");
 
-                    b.ToTable("Subscriptions");
+                    b.ToTable("Subscriptions", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -11,7 +11,7 @@ namespace MStore.AdminAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetList()
         {
-                return HandleResult(await Mediator.Send(new List.Query { SubscriptionId = GetSubscriptionId() }));
+            return HandleResult(await Mediator.Send(new List.Query { SubscriptionId = GetSubscriptionId() }));
         }
         [HttpPost]
         public async Task<IActionResult> Create(PostBrandDto Brand)
@@ -20,6 +20,18 @@ namespace MStore.AdminAPI.Controllers
             return HandleResult(await Mediator.Send(new Create.Command { Brand = Brand }));
         }
 
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> Details(Guid Id)
+        {
+            return HandleResult(await Mediator.Send(new Details.Query { Id = Id }));
+        }
+
+        [HttpPut("{Id}")]
+        public async Task<IActionResult> Edit(PostBrandDto Brand)
+        {
+            return HandleResult(await Mediator.Send(new Edit.Command { Brand = Brand }));
+        }
+        
      
     }
 }

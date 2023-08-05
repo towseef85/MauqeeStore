@@ -7,7 +7,7 @@
         public string? OtherName { get; set; }
         public string Description { get; set; }
         public bool Published { get; set; } = true;
-        public string? ImageId { get; set; }
+        public string? ImageData { get; set; }
         public bool ShowOnHomepage { get; set; } = false;
         public int? DisplayOrder { get; set; }
     }

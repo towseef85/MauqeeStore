@@ -49,14 +49,14 @@ namespace MStore.Persistence.Repos
                 IdentityResult identityResult = await _userManager.CreateAsync(user, PostSubscriptionDto.Password);
                 if (identityResult.Succeeded)
                 {
-                        
-                        //var role = new IdentityRole
-                        //{
-                        //    Name = "Subscriber"
-                        //};
 
-                        //await _roleManager.CreateAsync(role);
-                     await _userManager.AddToRoleAsync(user, "Subscriber");
+                        var role = new IdentityRole
+                        {
+                            Name = "Subscriber"
+                        };
+
+                        await _roleManager.CreateAsync(role);
+                        await _userManager.AddToRoleAsync(user, "Subscriber");
                     return true;
                    
                 }

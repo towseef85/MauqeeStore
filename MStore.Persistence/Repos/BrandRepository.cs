@@ -41,9 +41,9 @@ namespace MStore.Persistence.Repos
             return resultData;
         }
 
-        public async Task<GetBrandDto> GetBrandById(Guid BrandId, Guid subscriptionId)
+        public async Task<GetBrandDto> GetBrandById(Guid BrandId)
         {
-            var result = await _context.Brands.Where(x => x.Id == BrandId && x.SubscriptionId == subscriptionId).FirstOrDefaultAsync();
+            var result = await _context.Brands.Where(x => x.Id == BrandId).FirstOrDefaultAsync();
             var resultData = _mapper.Map<GetBrandDto>(result);
             return resultData;
         }
@@ -53,8 +53,13 @@ namespace MStore.Persistence.Repos
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateBrand(PostBrandDto PostBrandDto)
+        public async Task<bool> UpdateBrand(PostBrandDto PostBrandDto, CancellationToken cancellationToken)
         {
+            var data = await _context.Brands.FindAsync(PostBrandDto.Id);
+            if(data == null) return false;
+            _mapper.Map<PostBrandDto>(data);
+            var result = await _context.SaveChangesAsync(cancellationToken) > 0;
+            return result;
             throw new NotImplementedException();
         }
     }
