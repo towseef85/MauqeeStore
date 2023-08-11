@@ -199,7 +199,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Common.Category", b =>
@@ -223,7 +223,7 @@ namespace MStore.Persistence.Migrations
                     b.Property<string>("EngName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageId")
+                    b.Property<string>("ImageData")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MetaDescription")
@@ -255,9 +255,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SubscriptionId");
-
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.Product", b =>
@@ -320,9 +318,6 @@ namespace MStore.Persistence.Migrations
                     b.Property<Guid?>("ParentProductId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("PictureId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid?>("ProductAttributeCombinationId")
                         .HasColumnType("uniqueidentifier");
 
@@ -341,6 +336,9 @@ namespace MStore.Persistence.Migrations
                     b.Property<Guid>("SubscriptionId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("TaxCategoryId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
@@ -350,7 +348,9 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products", (string)null);
+                    b.HasIndex("TaxCategoryId");
+
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductAttribute", b =>
@@ -387,7 +387,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("ProductAttributeCombinationId");
 
-                    b.ToTable("ProductAttributes", (string)null);
+                    b.ToTable("ProductAttributes");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductAttributeCombination", b =>
@@ -439,7 +439,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductAttributeCombinations", (string)null);
+                    b.ToTable("ProductAttributeCombinations");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductAttributeValue", b =>
@@ -482,7 +482,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("ProductAttributeId");
 
-                    b.ToTable("ProductAttributeValues", (string)null);
+                    b.ToTable("ProductAttributeValues");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductTags", b =>
@@ -519,7 +519,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductTags", (string)null);
+                    b.ToTable("ProductTags");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.CMS.Commons.Navigation", b =>
@@ -560,7 +560,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Navigations", (string)null);
+                    b.ToTable("Navigations");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Identities.AppUsers", b =>
@@ -669,7 +669,7 @@ namespace MStore.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Plans", (string)null);
+                    b.ToTable("Plans");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Subscriptions.Subscription", b =>
@@ -712,7 +712,39 @@ namespace MStore.Persistence.Migrations
 
                     b.HasIndex("PlanId");
 
-                    b.ToTable("Subscriptions", (string)null);
+                    b.ToTable("Subscriptions");
+                });
+
+            modelBuilder.Entity("MStore.Domain.Financials.TaxCategory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CategoryName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("SubscriptionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<float>("Value")
+                        .HasColumnType("real");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TaxCategories");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -766,17 +798,6 @@ namespace MStore.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MStore.Domain.Entities.Catalog.Common.Category", b =>
-                {
-                    b.HasOne("MStore.Domain.Entities.Subscriptions.Subscription", "Subscriptions")
-                        .WithMany("Categories")
-                        .HasForeignKey("SubscriptionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Subscriptions");
-                });
-
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.Product", b =>
                 {
                     b.HasOne("MStore.Domain.Entities.Catalog.Common.Brand", "Brand")
@@ -791,9 +812,17 @@ namespace MStore.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("MStore.Domain.Financials.TaxCategory", "TaxCategory")
+                        .WithMany("Products")
+                        .HasForeignKey("TaxCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
+
+                    b.Navigation("TaxCategory");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductAttribute", b =>
@@ -892,9 +921,12 @@ namespace MStore.Persistence.Migrations
 
             modelBuilder.Entity("MStore.Domain.Entities.Subscriptions.Subscription", b =>
                 {
-                    b.Navigation("Categories");
-
                     b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("MStore.Domain.Financials.TaxCategory", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

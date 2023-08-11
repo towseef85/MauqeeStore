@@ -13,6 +13,7 @@ namespace MStore.Application.CatalogBL.CategoryBL
         public CategoryValidation()
         {
             RuleFor(x => x.EngName).NotEmpty();
+            RuleFor(x => x.OtherName).NotEmpty();
             RuleFor(x => x.SubscriptionId).NotEmpty();
         }
     }

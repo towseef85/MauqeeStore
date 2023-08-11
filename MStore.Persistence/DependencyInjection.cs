@@ -14,6 +14,7 @@ namespace MStore.Persistence
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
             services.AddScoped<IProductAttributeRepository, ProductAttributeRepository>();
+            services.AddScoped<ITaxCategoryRepository, TaxCategoryRepository>();
             services.AddScoped<TokenService>();
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
             return services;

@@ -8,10 +8,7 @@ namespace MStore.Persistence.EntityConfig
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.HasKey(x => x.Id);
-            builder.HasOne(x => x.Subscriptions)
-                .WithMany(x => x.Categories)
-                .HasForeignKey(x => x.SubscriptionId);
+           
         }
     }
 }

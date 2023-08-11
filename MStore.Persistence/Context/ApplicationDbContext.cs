@@ -9,6 +9,7 @@ using MStore.Domain.Entities.Identities;
 using MStore.Domain.Entities.Subscriptions;
 using System.Data;
 using MStore.Persistence.EntityConfig;
+using MStore.Domain.Financials;
 
 namespace MStore.Persistence.Context
 {
@@ -72,6 +73,7 @@ namespace MStore.Persistence.Context
         public DbSet<Navigation> Navigations { get; set; }
         public DbSet<Plans> Plans { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
+        public DbSet<TaxCategory> TaxCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

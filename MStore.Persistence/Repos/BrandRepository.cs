@@ -25,17 +25,17 @@ namespace MStore.Persistence.Repos
 
         public async Task<bool> DeleteBrand(Guid BrandId)
         {
-            var position = await _context.Brands.FindAsync(BrandId);
-            if (position == null) return false;
-            position.Deleted = true;
-            position.DeleteDate = DateTime.Now;
+            var data = await _context.Brands.FindAsync(BrandId);
+            if (data == null) return false;
+            data.Deleted = true;
+            data.DeleteDate = DateTime.Now;
             var result = await _context.SaveChangesAsync() > 0;
             return result;
         }
 
         public async Task<List<GetBrandDto>> GetAllBrand(Guid subscriptionId)
         {
-            var result = await _context.Brands.Where(x => x.SubscriptionId == subscriptionId).ToListAsync();
+            var result = await _context.Brands.Where(x => x.SubscriptionId == subscriptionId && x.Deleted == false).ToListAsync();
 
             var resultData = _mapper.Map<List<GetBrandDto>>(result);
             return resultData;
@@ -57,10 +57,9 @@ namespace MStore.Persistence.Repos
         {
             var data = await _context.Brands.FindAsync(PostBrandDto.Id);
             if(data == null) return false;
-            _mapper.Map<PostBrandDto>(data);
+            _mapper.Map(PostBrandDto, data);
             var result = await _context.SaveChangesAsync(cancellationToken) > 0;
             return result;
-            throw new NotImplementedException();
         }
     }
 }

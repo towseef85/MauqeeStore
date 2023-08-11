@@ -21,6 +21,10 @@ namespace MStore.AdminAPI.Controllers
         public async Task<ActionResult<GetUserDto>> GetCurrentUser()
         {
             var email = User.FindFirstValue(ClaimTypes.Email);
+            if(email == null)
+            {
+                return null;
+            }
             return HandleResult(await Mediator.Send(new LoggedInUser.Command { Email = email }));
         }
     }

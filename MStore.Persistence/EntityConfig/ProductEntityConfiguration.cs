@@ -15,6 +15,9 @@ namespace MStore.Persistence.EntityConfig
             builder.HasOne(x => x.Brand)
                .WithMany(x => x.Products)
                .HasForeignKey(x => x.BrandId);
+            builder.HasOne(x=>x.TaxCategory)
+                .WithMany(x => x.Products)
+                .HasForeignKey(x=> x.TaxCategoryId);
         }
     }
 }

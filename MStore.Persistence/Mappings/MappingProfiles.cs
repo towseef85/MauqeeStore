@@ -3,10 +3,12 @@ using MStore.Application.Dtos.CatalogDtos.Brand;
 using MStore.Application.Dtos.CatalogDtos.Category;
 using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
 using MStore.Application.Dtos.CatalogDtos.ProductAttributeValue;
+using MStore.Application.Dtos.CatalogDtos.TaxCategory;
 using MStore.Application.Dtos.SubscriptionDtos;
 using MStore.Domain.Entities.Catalog.Common;
 using MStore.Domain.Entities.Catalog.Products;
 using MStore.Domain.Entities.Subscriptions;
+using MStore.Domain.Financials;
 
 namespace MStore.Persistence.Mappings
 {
@@ -27,6 +29,9 @@ namespace MStore.Persistence.Mappings
                 .ForMember(x=>x.ProductAttributeValue, y=>y.MapFrom(x=>x.ProductAttributeValues));
             CreateMap<ProductAttributeValue, GetProductAttributeValueDto>();
             CreateMap<PostProductAttributeCombinationDto, ProductAttributeCombination>();
+            CreateMap<PostTaxCategoryDto,TaxCategory>();
+            CreateMap<TaxCategory, GetTaxCategoryDto>();
+
         }
     }
 }

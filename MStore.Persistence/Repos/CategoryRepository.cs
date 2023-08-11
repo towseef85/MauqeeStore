@@ -23,22 +23,27 @@ namespace MStore.Persistence.Repos
             return result;
         }
 
-        public Task<bool> DeleteCategory(Guid CategoryId)
+        public async Task<bool> DeleteCategory(Guid CategoryId)
         {
-            throw new NotImplementedException();
+            var data = await _context.Categories.FindAsync(CategoryId);
+            if (data == null) return false;
+            data.Deleted = true;
+            data.DeleteDate = DateTime.Now;
+            var result = await _context.SaveChangesAsync() > 0;
+            return result;
         }
 
         public async Task<List<GetCategoriesDto>> GetAllCategory(Guid subscriptionId)
         {
-            var result = await _context.Categories.Where(x=>x.SubscriptionId == subscriptionId).ToListAsync();
+            var result = await _context.Categories.Where(x=>x.SubscriptionId == subscriptionId && x.Deleted == false).ToListAsync();
 
             var resultData = _mapper.Map<List<GetCategoriesDto>>(result);
             return resultData;
         }
 
-        public async Task<GetCategoriesDto> GetCategoryById(Guid CategoryId, Guid subscriptionId)
+        public async Task<GetCategoriesDto> GetCategoryById(Guid CategoryId)
         {
-            var result = await _context.Categories.Where(x=>x.Id == CategoryId && x.SubscriptionId == subscriptionId).FirstOrDefaultAsync();
+            var result = await _context.Categories.Where(x=>x.Id == CategoryId).FirstOrDefaultAsync();
             var resultData = _mapper.Map<GetCategoriesDto>(result);
             return resultData;
         }
@@ -48,9 +53,13 @@ namespace MStore.Persistence.Repos
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateCategory(PostCategoryDto PostCategoryDto)
+        public async Task<bool> UpdateCategory(PostCategoryDto PostCategoryDto, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var data = await _context.Categories.FindAsync(PostCategoryDto.Id);
+            if (data == null) return false;
+            _mapper.Map(PostCategoryDto, data);
+            var result = await _context.SaveChangesAsync(cancellationToken) > 0;
+            return result;
         }
     }
 }

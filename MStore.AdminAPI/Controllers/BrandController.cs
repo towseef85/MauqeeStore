@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MStore.Application.CatalogBL.BrandBL;
 using MStore.Application.Dtos.CatalogDtos.Brand;
-using System.Security.Claims;
 
 namespace MStore.AdminAPI.Controllers
 {
@@ -29,7 +28,14 @@ namespace MStore.AdminAPI.Controllers
         [HttpPut("{Id}")]
         public async Task<IActionResult> Edit(PostBrandDto Brand)
         {
+            Brand.SubscriptionId= GetSubscriptionId();
             return HandleResult(await Mediator.Send(new Edit.Command { Brand = Brand }));
+        }
+
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> Delete(Guid Id)
+        {
+            return HandleResult(await Mediator.Send(new Delete.Command { Id = Id }));
         }
         
      

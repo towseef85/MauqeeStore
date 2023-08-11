@@ -17,11 +17,10 @@ namespace MStore.Domain.Entities.Catalog.Common
         public string? MetaDescription { get; set; }
         public string? MetaTitle { get; set; }
         public Guid? ParentCategoryId { get; set; }
-        public string? ImageId { get; set; }
+        public string? ImageData { get; set; }
         public bool ShowOnHomepage { get; set; } = false;
         public bool Published { get; set; } = true;
         public int? DisplayOrder { get; set; }
         public ICollection<Product> Products { get; set; }
-        public virtual Subscription Subscriptions { get; set; }
     }
 }

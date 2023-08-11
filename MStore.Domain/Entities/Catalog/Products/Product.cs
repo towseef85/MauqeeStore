@@ -1,4 +1,5 @@
 ﻿using MStore.Domain.Entities.Catalog.Common;
+using MStore.Domain.Financials;
 
 namespace MStore.Domain.Entities.Catalog.Products
 {
@@ -12,7 +13,6 @@ namespace MStore.Domain.Entities.Catalog.Products
         public string? MetaDescription { get; set; }
         public string? MetaTitle { get; set; }
         public Guid? ParentProductId { get; set; }
-        public Guid? PictureId { get; set; }
         public bool ShowOnHomepage { get; set; } = false;
         public bool Published { get; set; } = true;
         public int? DisplayOrder { get; set; }
@@ -27,6 +27,8 @@ namespace MStore.Domain.Entities.Catalog.Products
         public Guid BrandId { get; set; }
         public virtual Brand Brand { get; set; }
         public Guid? ProductTagId { get; set; }
+        public Guid TaxCategoryId { get; set; }
+        public virtual TaxCategory TaxCategory { get; set; }
         public ICollection<ProductTags>? ProductTags { get; set; }
         public Guid? ProductAttributeCombinationId { get; set; }
         public ICollection<ProductAttributeCombination> ProductAttributeCombinations { get; set; }

@@ -13,6 +13,5 @@ namespace MStore.Domain.Entities.Subscriptions
         public AppUsers Users  { get; set; }
         public bool IsActive { get; set; }
         public virtual Plans Plans { get; set; }
-        public ICollection<Category> Categories { get; set; }
     }
 }
