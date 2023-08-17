@@ -463,13 +463,7 @@ namespace MStore.Persistence.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<string>("PictureId")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("ProductAttributeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("SubscriptionId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("UpdatedDate")
@@ -731,6 +725,9 @@ namespace MStore.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
                     b.Property<Guid>("SubscriptionId")

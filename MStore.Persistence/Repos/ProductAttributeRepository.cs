@@ -18,32 +18,9 @@ namespace MStore.Persistence.Repos
         }
         public async Task<bool> AddProductAttribute(PostProductAttributeDto PostProductAttributeDto, CancellationToken cancellationToken)
         {
-            var attribute = new ProductAttribute
-            {
-                Id = PostProductAttributeDto.Id,
-                SubscriptionId = PostProductAttributeDto.SubscriptionId,
-                EngName = PostProductAttributeDto.EngName,
-                OtherName = PostProductAttributeDto.OtherName,
-            };
-            _context.ProductAttributes.Add(attribute);
-            var result = await _context.SaveChangesAsync(cancellationToken) > 0;
-            if (result)
-            {
-                var attributeValue = new ProductAttributeValue
-                {
-                    Id = Guid.NewGuid(),
-                    Value = PostProductAttributeDto.Value,
-                    ProductAttributeId = PostProductAttributeDto.Id,
-                    SubscriptionId = PostProductAttributeDto.SubscriptionId,
-                    IsActive = PostProductAttributeDto.IsActive,
-                    DisplayOrder = PostProductAttributeDto.DisplayOrder
-                   
-                };
-                _context.ProductAttributeValues.Add(attributeValue);
-                var result2 = await _context.SaveChangesAsync(cancellationToken) > 0;
-                return result2;
-            }
-            return false;
+            _context.ProductAttributes.Add(_mapper.Map<ProductAttribute>(PostProductAttributeDto));
+            var result = await _context.SaveChangesAsync(cancellationToken)>0;
+            return result;
         }
 
         public async Task<bool> AddProductAttributeCombination(PostProductAttributeCombinationDto PostProductAttributeCombinationDto, CancellationToken cancellationToken)

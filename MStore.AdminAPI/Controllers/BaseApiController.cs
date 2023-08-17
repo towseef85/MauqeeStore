@@ -7,7 +7,7 @@ using System.Security.Claims;
 
 namespace MStore.AdminAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     [Authorize]
     public class BaseApiController : ControllerBase
@@ -28,6 +28,7 @@ namespace MStore.AdminAPI.Controllers
             return BadRequest(result.Error);
         }
 
+        
         protected Guid GetSubscriptionId()
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;

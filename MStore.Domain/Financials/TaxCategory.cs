@@ -8,6 +8,7 @@ namespace MStore.Domain.Financials
         public Guid SubscriptionId { get; set; }
         public string CategoryName { get; set; }
         public float Value { get; set; }
+        public bool IsActive { get; set; } = true;
         public ICollection<Product> Products { get; set; }
     }
 }

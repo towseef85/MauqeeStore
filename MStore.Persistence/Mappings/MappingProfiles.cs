@@ -27,6 +27,9 @@ namespace MStore.Persistence.Mappings
             CreateMap<Brand, GetBrandDto>();
             CreateMap<ProductAttribute, GetProductAttributeDto>()
                 .ForMember(x=>x.ProductAttributeValue, y=>y.MapFrom(x=>x.ProductAttributeValues));
+            CreateMap<PostProductAttributeDto, ProductAttribute>()
+                .ForMember(x => x.ProductAttributeValues, y => y.MapFrom(x => x.AttributeValues));
+            CreateMap<PostProductAttributeValues, ProductAttributeValue>();
             CreateMap<ProductAttributeValue, GetProductAttributeValueDto>();
             CreateMap<PostProductAttributeCombinationDto, ProductAttributeCombination>();
             CreateMap<PostTaxCategoryDto,TaxCategory>();

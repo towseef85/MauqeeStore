@@ -11,6 +11,7 @@ namespace MStore.Application.Dtos.CatalogDtos.TaxCategory
         public Guid Id { get; set; }
         public Guid SubscriptionId { get; set; }
         public string CategoryName { get; set; }
+        public bool IsActive { get; set; }
         public float Value { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace MStore.Application.CatalogBL.ProductAttributeBL
         {
             RuleFor(x => x.EngName).NotNull().NotEmpty();
             RuleFor(x => x.SubscriptionId).NotNull().NotEmpty();
-            RuleFor(x => x.Value).NotNull().NotEmpty();
+            RuleFor(x => x.AttributeValues).NotNull().NotEmpty();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace MStore.AdminAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(PostProductAttributeDto ProductAttribute)
         {
+            ProductAttribute.SubscriptionId= GetSubscriptionId();
             return HandleResult(await Mediator.Send(new Create.Command { ProductAttribute = ProductAttribute }));
         }
     }
