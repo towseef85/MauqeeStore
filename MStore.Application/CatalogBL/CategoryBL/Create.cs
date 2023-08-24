@@ -36,7 +36,7 @@ namespace MStore.Application.CatalogBL.CategoryBL
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var result = await _iCategoryRepo.AddCategory(request.Category, cancellationToken);
-                if (!result) return Result<Unit>.Failure("Unable to add Category");
+                if (!result) return Result<Unit>.Failure("Unable to add Category, Please Check Name");
                 return Result<Unit>.Success(Unit.Value);
             }
         }

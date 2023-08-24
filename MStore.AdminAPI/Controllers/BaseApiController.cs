@@ -7,7 +7,7 @@ using System.Security.Claims;
 
 namespace MStore.AdminAPI.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("/api/v1/[controller]")]
     [ApiController]
     [Authorize]
     public class BaseApiController : ControllerBase
