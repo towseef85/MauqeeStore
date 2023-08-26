@@ -1,4 +1,5 @@
 ﻿using MStore.Domain.Entities.Catalog.Common;
+using MStore.Domain.Entities.Financials;
 using MStore.Domain.Financials;
 
 namespace MStore.Domain.Entities.Catalog.Products
