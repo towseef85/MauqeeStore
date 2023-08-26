@@ -74,7 +74,8 @@ namespace MStore.Persistence.Context
         public DbSet<Plans> Plans { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
         public DbSet<TaxCategory> TaxCategories { get; set; }
-
+        public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Offers> Offers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
