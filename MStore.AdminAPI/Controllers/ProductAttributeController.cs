@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MStore.Application.CatalogBL.ProductAttributeBL;
+using MStore.Application.Dtos.CatalogDtos.Brand;
 using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
 
 namespace MStore.AdminAPI.Controllers
@@ -18,6 +19,18 @@ namespace MStore.AdminAPI.Controllers
         {
             ProductAttribute.SubscriptionId= GetSubscriptionId();
             return HandleResult(await Mediator.Send(new Create.Command { ProductAttribute = ProductAttribute }));
+        }
+
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> Details(Guid Id)
+        {
+            return HandleResult(await Mediator.Send(new Details.Query { Id = Id }));
+        }
+        [HttpPut("{Id}")]
+        public async Task<IActionResult> Edit(PostProductAttributeDto ProductAttribute)
+        {
+            ProductAttribute.SubscriptionId = GetSubscriptionId();
+            return HandleResult(await Mediator.Send(new Edit.Command { ProductAttribute = ProductAttribute }));
         }
     }
 }

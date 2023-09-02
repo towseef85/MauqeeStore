@@ -1,9 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using MStore.Application.Dtos.CatalogDtos.Brand;
 using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
 using MStore.Application.Interfaces;
+using MStore.Domain.Entities.Catalog.Common;
 using MStore.Domain.Entities.Catalog.Products;
 using MStore.Persistence.Context;
+using System.Threading;
 
 namespace MStore.Persistence.Repos
 {
@@ -44,9 +47,11 @@ namespace MStore.Persistence.Repos
             return _mapper.Map<List<GetProductAttributeDto>>(result);
         }
 
-        public Task<GetProductAttributeDto> GetProductAttributeById(Guid ProductAttributeId, Guid subscriptionId)
+        public async Task<GetProductAttributeDto> GetProductAttributeById(Guid ProductAttributeId)
         {
-            throw new NotImplementedException();
+            var result = await _context.ProductAttributes.Include(x=>x.ProductAttributeValues).Where(x => x.Id == ProductAttributeId).FirstOrDefaultAsync();
+            var resultData = _mapper.Map<GetProductAttributeDto>(result);
+            return resultData;
         }
 
         public Task<List<GetProductAttributeDto>> GetProductsForProductAttribute(Guid ProductAttributeId, Guid subscriptionId)
@@ -54,9 +59,19 @@ namespace MStore.Persistence.Repos
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateProductAttribute(PostProductAttributeDto PostProductAttributeDto)
+        public async Task<bool> UpdateProductAttribute(PostProductAttributeDto PostProductAttributeDto, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var data = await _context.ProductAttributes.FindAsync(PostProductAttributeDto.Id);
+            if (data == null) return false;
+            _context.ProductAttributes.Remove(data);
+          var result1=  await _context.SaveChangesAsync(cancellationToken) >0;
+            if (result1)
+            {
+                _context.ProductAttributes.Add(_mapper.Map<ProductAttribute>(PostProductAttributeDto));
+                var result = await _context.SaveChangesAsync(cancellationToken) > 0;
+                return result;
+            }
+            return false;
         }
     }
 }
