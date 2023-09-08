@@ -21,7 +21,7 @@ namespace MStore.Application.FinanceBL.TaxCategoryBL
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var result = await _iTaxCategoryRepo.DeleteTaxCategory(request.Id);
-                if (!result) return Result<Unit>.Failure("Failed to update Tax Category");
+                if (!result) return Result<Unit>.Failure("Failed to Delete Tax Category");
                 return Result<Unit>.Success(Unit.Value);
             }
         }

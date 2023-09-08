@@ -1,16 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using MStore.Application.Dtos.CatalogDtos.Brand;
 using MStore.Application.Dtos.CatalogDtos.TaxCategory;
 using MStore.Application.Interfaces;
-using MStore.Domain.Entities.Catalog.Common;
 using MStore.Domain.Financials;
 using MStore.Persistence.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MStore.Persistence.Repos
 {
@@ -60,8 +53,10 @@ namespace MStore.Persistence.Repos
         {
             var data = await _context.TaxCategories.FindAsync(PostTaxCategoryDto.Id);
             if (data == null) return false;
+           
             _mapper.Map(PostTaxCategoryDto, data);
             var result = await _context.SaveChangesAsync(cancellationToken) > 0;
+           
             return result;
         }
     }

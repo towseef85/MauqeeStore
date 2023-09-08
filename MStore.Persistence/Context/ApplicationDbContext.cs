@@ -17,6 +17,7 @@ namespace MStore.Persistence.Context
     public class ApplicationDbContext : IdentityDbContext<AppUsers>
     {
         private IDbContextTransaction _currentTransaction;
+       
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions) : base(dbContextOptions)
         {
             //try
@@ -35,7 +36,10 @@ namespace MStore.Persistence.Context
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.EnableDetailedErrors();
+        {
+            optionsBuilder.EnableDetailedErrors();
+        }
+            
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
