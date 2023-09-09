@@ -90,6 +90,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("X-Frame-Options", "deny");
+    context.Response.Headers.Add("X-Xss-Protection", "1");
+    context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+    context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+    await next.Invoke();
+});
 
 app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");

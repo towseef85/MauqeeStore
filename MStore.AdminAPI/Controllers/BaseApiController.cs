@@ -28,6 +28,25 @@ namespace MStore.AdminAPI.Controllers
             return BadRequest(result.Error);
         }
 
+        protected ActionResult HandleResponse<T>(ServiceStatus<T> result)
+        {
+            if((int)result.Code == 200)
+            {
+                return new ObjectResult(result)
+                {
+                    StatusCode = (int)result.Code
+                };
+            }
+            else
+            {
+                return new ObjectResult(result)
+                {
+                    StatusCode = (int)result.Code
+                };
+               
+            }
+        }
+
         
         protected Guid GetSubscriptionId()
         {

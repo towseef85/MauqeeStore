@@ -4,9 +4,11 @@ using MStore.Application.Dtos.CatalogDtos.Category;
 using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
 using MStore.Application.Dtos.CatalogDtos.ProductAttributeValue;
 using MStore.Application.Dtos.CatalogDtos.TaxCategory;
+using MStore.Application.Dtos.CMSDtos.Slider;
 using MStore.Application.Dtos.SubscriptionDtos;
 using MStore.Domain.Entities.Catalog.Common;
 using MStore.Domain.Entities.Catalog.Products;
+using MStore.Domain.Entities.CMS.Commons;
 using MStore.Domain.Entities.Subscriptions;
 using MStore.Domain.Financials;
 
@@ -34,6 +36,8 @@ namespace MStore.Persistence.Mappings
             CreateMap<PostProductAttributeCombinationDto, ProductAttributeCombination>();
             CreateMap<PostTaxCategoryDto,TaxCategory>();
             CreateMap<TaxCategory, GetTaxCategoryDto>();
+            CreateMap<Slider, GetSliderDto>();
+            CreateMap<PostSliderDto, Slider>();
 
         }
     }

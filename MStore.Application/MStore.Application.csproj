@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CmsBL\NavigationBL\" />
     <Folder Include="CustomerBL\" />
   </ItemGroup>
 
