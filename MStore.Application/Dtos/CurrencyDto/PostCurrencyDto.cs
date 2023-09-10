@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MStore.Domain.Entities.Financials
+namespace MStore.Application.Dtos.CurrencyDto
 {
-    public class Currency : BaseEntity
+    public class PostCurrencyDto
     {
+        public Guid Id { get; set; } = new Guid();
         public Guid SubscriptionId { get; set; }
         public string Name { get; set; }
         public string Symbol { get; set; }
