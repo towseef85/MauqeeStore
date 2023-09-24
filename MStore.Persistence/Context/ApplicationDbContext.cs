@@ -11,6 +11,7 @@ using System.Data;
 using MStore.Persistence.EntityConfig;
 using MStore.Domain.Financials;
 using MStore.Domain.Entities.Financials;
+using MStore.Domain.Entities.Customers;
 
 namespace MStore.Persistence.Context
 {
@@ -84,6 +85,8 @@ namespace MStore.Persistence.Context
         public DbSet<GiftCard> GiftCards { get; set; }
         public DbSet<Shipping> Shippings { get; set; }
         public DbSet<Currency> Currencies { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Address> Adresses { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

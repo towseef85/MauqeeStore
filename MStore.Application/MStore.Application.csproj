@@ -18,8 +18,4 @@
     <ProjectReference Include="..\MStore.Domain\MStore.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CustomerBL\" />
-  </ItemGroup>
-
 </Project>

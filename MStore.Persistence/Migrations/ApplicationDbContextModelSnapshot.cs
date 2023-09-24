@@ -633,6 +633,117 @@ namespace MStore.Persistence.Migrations
                     b.ToTable("Sliders");
                 });
 
+            modelBuilder.Entity("MStore.Domain.Entities.Customers.Address", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Address2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ArbDesc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("County")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("EngDesc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FaxNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("StateProvinceId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ZipPostalCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("Adresses");
+                });
+
+            modelBuilder.Entity("MStore.Domain.Entities.Customers.Customer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("AdminComment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("AffiliateId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("HasShoppingCartItems")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsTaxExempt")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastActivityDateUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("LastLoginDateUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("SubscriptionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customers");
+                });
+
             modelBuilder.Entity("MStore.Domain.Entities.Financials.Currency", b =>
                 {
                     b.Property<Guid>("Id")
@@ -1061,6 +1172,17 @@ namespace MStore.Persistence.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("MStore.Domain.Entities.Customers.Address", b =>
+                {
+                    b.HasOne("MStore.Domain.Entities.Customers.Customer", "Customer")
+                        .WithMany("Addresses")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
             modelBuilder.Entity("MStore.Domain.Entities.Identities.AppUsers", b =>
                 {
                     b.HasOne("MStore.Domain.Entities.Subscriptions.Subscription", "Subscriptions")
@@ -1108,6 +1230,11 @@ namespace MStore.Persistence.Migrations
             modelBuilder.Entity("MStore.Domain.Entities.Catalog.Products.ProductAttributeCombination", b =>
                 {
                     b.Navigation("ProductAttributes");
+                });
+
+            modelBuilder.Entity("MStore.Domain.Entities.Customers.Customer", b =>
+                {
+                    b.Navigation("Addresses");
                 });
 
             modelBuilder.Entity("MStore.Domain.Entities.Subscriptions.Plans", b =>
