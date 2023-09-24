@@ -91,6 +91,7 @@ namespace MStore.Persistence.Context
             modelBuilder.ApplyConfiguration(new ProductTagsEntityConfiguration());
             modelBuilder.ApplyConfiguration(new SubscriptionEntityConfiguration());
             modelBuilder.ApplyConfiguration(new ProductAttributeValueEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductArributeCombinationEntityConfiguration());
 
         }
         public async Task<IDbContextTransaction> BeginTransactionAsync()

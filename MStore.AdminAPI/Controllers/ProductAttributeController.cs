@@ -10,9 +10,9 @@ namespace MStore.AdminAPI.Controllers
     public class ProductAttributeController : BaseApiController
     {
         [HttpGet]
-        public async Task<IActionResult> GetList(Guid SubscriptionId)
+        public async Task<IActionResult> GetList()
         {
-            return HandleResult(await Mediator.Send(new List.Query { SubscriptionId = SubscriptionId }));
+            return HandleResult(await Mediator.Send(new List.Query { SubscriptionId = GetSubscriptionId() }));
         }
         [HttpPost]
         public async Task<IActionResult> Create(PostProductAttributeDto ProductAttribute)

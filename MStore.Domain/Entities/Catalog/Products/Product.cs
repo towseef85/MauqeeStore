@@ -31,7 +31,6 @@ namespace MStore.Domain.Entities.Catalog.Products
         public Guid TaxCategoryId { get; set; }
         public virtual TaxCategory TaxCategory { get; set; }
         public ICollection<ProductTags>? ProductTags { get; set; }
-        public Guid? ProductAttributeCombinationId { get; set; }
         public ICollection<ProductAttributeCombination> ProductAttributeCombinations { get; set; }
     }
 }

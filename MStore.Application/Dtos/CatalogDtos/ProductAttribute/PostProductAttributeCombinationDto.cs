@@ -8,9 +8,10 @@ namespace MStore.Application.Dtos.CatalogDtos.ProductAttribute
 {
     public class PostProductAttributeCombinationDto
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public Guid SubscriptionId { get; set; }
         public Guid ProductId { get; set; }
+        public Guid AttributeValueId { get; set; }
         public Guid ProductAttributeId { get; set; }
         public string? Sku { get; set; }
         public string? Gtin { get; set; }

@@ -318,9 +318,6 @@ namespace MStore.Persistence.Migrations
                     b.Property<Guid?>("ParentProductId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ProductAttributeCombinationId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid?>("ProductTagId")
                         .HasColumnType("uniqueidentifier");
 
@@ -398,6 +395,9 @@ namespace MStore.Persistence.Migrations
 
                     b.Property<bool>("AllowOutOfStockOrders")
                         .HasColumnType("bit");
+
+                    b.Property<Guid>("AttributeValueId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");

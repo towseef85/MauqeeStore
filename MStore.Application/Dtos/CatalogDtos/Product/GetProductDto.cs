@@ -1,4 +1,6 @@
-﻿namespace MStore.Application.Dtos.CatalogDtos.Product
+﻿using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
+
+namespace MStore.Application.Dtos.CatalogDtos.Product
 {
     public class GetProductDto
     {
@@ -23,5 +25,6 @@
         public Guid UserId { get; set; }
         public Guid? ProductTagId { get; set; }
         public Guid? ProductAttributeCombinationId { get; set; }
+        public ICollection<GetProductAttributeCombinationDto> AttributeCombination { get; set; }
     }
 }

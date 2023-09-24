@@ -5,6 +5,7 @@
         public Guid SubscriptionId { get; set; }
         public Guid ProductId { get; set; }
         public Guid ProductAttributeId { get; set; }
+        public Guid AttributeValueId { get; set; }
         public string? Sku { get; set; }
         public string? Gtin { get; set; }
         public string PictureId { get; set; }

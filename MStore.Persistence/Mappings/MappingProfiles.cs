@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MStore.Application.Dtos.CatalogDtos.Brand;
 using MStore.Application.Dtos.CatalogDtos.Category;
+using MStore.Application.Dtos.CatalogDtos.Product;
 using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
 using MStore.Application.Dtos.CatalogDtos.ProductAttributeValue;
 using MStore.Application.Dtos.CatalogDtos.TaxCategory;
@@ -27,6 +28,10 @@ namespace MStore.Persistence.Mappings
                 .ForMember(x=>x.EmailAddress, y=>y.MapFrom(x=>x.Users.Email));
             CreateMap<PostBrandDto, Brand>();
             CreateMap<Brand, GetBrandDto>();
+            CreateMap<PostProductDto, Product>()
+                .ForMember(x=>x.ProductAttributeCombinations,y=>y.MapFrom(x=>x.ProductAttributeCombinations));
+            CreateMap<Product, GetProductDto>()
+                .ForMember(x => x.AttributeCombination, y => y.MapFrom(x => x.ProductAttributeCombinations));
             CreateMap<ProductAttribute, GetProductAttributeDto>()
                 .ForMember(x=>x.ProductAttributeValue, y=>y.MapFrom(x=>x.ProductAttributeValues));
             CreateMap<PostProductAttributeDto, ProductAttribute>()
@@ -34,6 +39,7 @@ namespace MStore.Persistence.Mappings
             CreateMap<PostProductAttributeValues, ProductAttributeValue>();
             CreateMap<ProductAttributeValue, GetProductAttributeValueDto>();
             CreateMap<PostProductAttributeCombinationDto, ProductAttributeCombination>();
+            CreateMap<ProductAttributeCombination, GetProductAttributeCombinationDto>();
             CreateMap<PostTaxCategoryDto,TaxCategory>();
             CreateMap<TaxCategory, GetTaxCategoryDto>();
             CreateMap<Slider, GetSliderDto>();
