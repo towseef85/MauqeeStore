@@ -9,7 +9,7 @@ namespace MStore.Application.Interfaces
         Task<GetCustomerDto> GetCustomerById(Guid CusomerId);
         Task<List<GetCustomerDto>> GetProductsForCustomer(Guid CustomerId, Guid subscriptionId);
         Task<bool> AddCustomer(PostCustomerDto PostCustomerDto, CancellationToken cancellationToken);
-        //Task<bool> UpdateCustomer(PostCustomerDto PostCustomerDto, CancellationToken cancellationToken);
+        Task<bool> UpdateCustomer(PostCustomerDto PostCustomerDto, CancellationToken cancellationToken);
         Task<bool> DeleteCustomer(Guid CustomerId);
     }
 }

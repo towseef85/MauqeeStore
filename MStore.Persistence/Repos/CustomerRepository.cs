@@ -1,16 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using MStore.Application.Dtos.CatalogDtos.Brand;
+
 using MStore.Application.Dtos.CustomerDto;
 using MStore.Application.Interfaces;
-using MStore.Domain.Entities.Catalog.Common;
 using MStore.Domain.Entities.Customers;
 using MStore.Persistence.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MStore.Persistence.Repos
 {
@@ -52,6 +46,14 @@ namespace MStore.Persistence.Repos
         public Task<List<GetCustomerDto>> GetProductsForCustomer(Guid CustomerId, Guid subscriptionId)
         {
             throw new NotImplementedException();
+        }
+        public async Task<bool> UpdateCustomer(PostCustomerDto PostCustomerDto, CancellationToken cancellationToken)
+        {
+            var data = await _context.Customers.FindAsync(PostCustomerDto.Id);
+            if (data == null) return false;
+            _mapper.Map(PostCustomerDto, data);
+            var result = await _context.SaveChangesAsync(cancellationToken) > 0;
+            return result;
         }
     }
 }
