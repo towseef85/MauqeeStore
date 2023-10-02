@@ -10,4 +10,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.18" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Entities\Sales\" />
+    <None Remove="Entities\Sales\Discounts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\Sales\" />
+    <Folder Include="Entities\Sales\Discounts\" />
+  </ItemGroup>
 </Project>

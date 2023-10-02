@@ -2,13 +2,14 @@
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using MStore.Application.Dtos.CustomerDto.AddressDto;
+using MStore.Application.Interfaces;
 using MStore.Domain.Entities.Catalog.Common;
 using MStore.Domain.Entities.Customers;
 using MStore.Persistence.Context;
 
 namespace MStore.Persistence.Repos
 {
-	public class AddressRepository
+	public class AddressRepository:IAddressRepository
 	{
 		public readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;

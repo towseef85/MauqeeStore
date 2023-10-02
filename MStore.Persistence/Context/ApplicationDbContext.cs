@@ -12,6 +12,7 @@ using MStore.Persistence.EntityConfig;
 using MStore.Domain.Financials;
 using MStore.Domain.Entities.Financials;
 using MStore.Domain.Entities.Customers;
+using MStore.Domain.Entities.Sales.Discounts;
 
 namespace MStore.Persistence.Context
 {
@@ -87,6 +88,8 @@ namespace MStore.Persistence.Context
         public DbSet<Currency> Currencies { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<DiscountType> DiscountTypes { get; set; }
+        public DbSet<Discount> Discounts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -95,6 +98,7 @@ namespace MStore.Persistence.Context
             modelBuilder.ApplyConfiguration(new SubscriptionEntityConfiguration());
             modelBuilder.ApplyConfiguration(new ProductAttributeValueEntityConfiguration());
             modelBuilder.ApplyConfiguration(new ProductArributeCombinationEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new DiscountEntityConfigration());
 
         }
         public async Task<IDbContextTransaction> BeginTransactionAsync()

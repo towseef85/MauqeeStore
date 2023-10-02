@@ -4,6 +4,7 @@ namespace MStore.Application.Dtos.CatalogDtos.Product
 {
     public class GetProductDto
     {
+        public Guid Id { get; set; }
         public string EngName { get; set; }
         public string? OtherName { get; set; }
         public string? Description { get; set; }

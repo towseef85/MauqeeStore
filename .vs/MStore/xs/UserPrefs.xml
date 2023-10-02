@@ -1,48 +1,22 @@
 ﻿<Properties StartupConfiguration="{23343A4B-329F-48A5-8F2B-6F95BF495E34}|Default">
+  <MonoDevelop.Ide.ItemProperties.MStore.AdminAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MStore">
-            <Node name="MStore.Application">
-              <Node name="CustomerBL" expanded="True">
-                <Node name="AddressBL" expanded="True" />
-              </Node>
-              <Node name="Dtos" expanded="True">
-                <Node name="CatalogDtos" expanded="True">
-                  <Node name="Brand" expanded="True" />
-                  <Node name="ProductAttribute" expanded="True">
-                    <Node name="PostProductAttributeDto.cs" selected="True" />
-                  </Node>
-                </Node>
-                <Node name="CustomerDto" expanded="True">
-                  <Node name="AddressDto" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Interfaces" expanded="True" />
-            </Node>
-            <Node name="MStore.Domain">
-              <Node name="Entities" expanded="True">
-                <Node name="Catalog" expanded="True">
-                  <Node name="Common" expanded="True" />
-                  <Node name="Products" expanded="True" />
-                </Node>
-                <Node name="Customers" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="MStore.Persistence">
-              <Node name="Repos" expanded="True" />
+            <Node name="MStore.Application" expanded="True">
+              <Node name="Dtos" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MStore.AdminAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
