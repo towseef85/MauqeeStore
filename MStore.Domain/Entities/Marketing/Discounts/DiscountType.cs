@@ -1,5 +1,5 @@
 ﻿using System;
-namespace MStore.Domain.Entities.Sales.Discounts
+namespace MStore.Domain.Entities.Marketing.Discounts
 {
 	public class DiscountType:BaseEntity
 	{

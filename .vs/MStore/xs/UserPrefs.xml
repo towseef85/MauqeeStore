@@ -1,20 +1,41 @@
 ﻿<Properties StartupConfiguration="{23343A4B-329F-48A5-8F2B-6F95BF495E34}|Default">
-  <MonoDevelop.Ide.ItemProperties.MStore.AdminAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MStore.Persistence/Context/ApplicationDbContext.cs">
+    <Files>
+      <File FileName="MStore.Persistence/Context/ApplicationDbContext.cs" Line="91" Column="22" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MStore">
-            <Node name="MStore.Application" expanded="True">
-              <Node name="Dtos" expanded="True" />
+          <Node name="MStore" expanded="True">
+            <Node name="MStore.AdminAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
             </Node>
+            <Node name="MStore.Application" expanded="True">
+              <Node name="CatalogBL" expanded="True" />
+              <Node name="Dtos" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
+            </Node>
+            <Node name="MStore.Domain" expanded="True">
+              <Node name="Entities" expanded="True">
+                <Node name="Marketing" expanded="True">
+                  <Node name="Discounts" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="MStore.Persistence">
+              <Node name="Context" expanded="True" />
+              <Node name="EntityConfig" expanded="True" />
+              <Node name="Repos" expanded="True" />
+            </Node>
+            <Node name="MStore.WebAPI" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MStore.AdminAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using MStore.Domain.Entities.Sales.Discounts;
+using MStore.Domain.Entities.Marketing.Discounts;
 
 namespace MStore.Persistence.EntityConfig
 {

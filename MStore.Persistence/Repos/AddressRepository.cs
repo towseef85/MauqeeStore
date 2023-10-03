@@ -3,7 +3,6 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using MStore.Application.Dtos.CustomerDto.AddressDto;
 using MStore.Application.Interfaces;
-using MStore.Domain.Entities.Catalog.Common;
 using MStore.Domain.Entities.Customers;
 using MStore.Persistence.Context;
 
@@ -26,9 +25,14 @@ namespace MStore.Persistence.Repos
             return result;
         }
 
-        public Task<bool> DeleteAddress(Guid CustomerId)
+        public async Task<bool> DeleteAddress(Guid AddressId)
         {
-            throw new NotImplementedException();
+            var data = await _context.Addresses.FindAsync(AddressId);
+            if (data == null) return false;
+            data.Deleted = true;
+            data.DeleteDate = DateTime.Now;
+            var result = await _context.SaveChangesAsync() > 0;
+            return result;
         }
 
         public async Task<List<GetAddressDto>> GetAllAddress(Guid Customerid)

@@ -12,7 +12,7 @@ using MStore.Persistence.EntityConfig;
 using MStore.Domain.Financials;
 using MStore.Domain.Entities.Financials;
 using MStore.Domain.Entities.Customers;
-using MStore.Domain.Entities.Sales.Discounts;
+using MStore.Domain.Entities.Marketing.Discounts;
 
 namespace MStore.Persistence.Context
 {
