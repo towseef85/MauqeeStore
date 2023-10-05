@@ -3,10 +3,11 @@ namespace MStore.Domain.Entities.Marketing.Discounts
 {
 	public class Discount :BaseEntity
 	{
-		public Guid SubscriptionId { get; set; }
+        public Guid SubscriptionId { get; set; }
         public string Name { get; set; }
         public string OtherName { get; set; }
         public Guid DiscountTypeId { get; set; }
+        public bool IsActive { get; set; }
         public bool IsPercent { get; set; }
         public decimal DiscountPercentage { get; set; }
         public decimal DiscountAmount { get; set; }

@@ -3,7 +3,7 @@ namespace MStore.Domain.Entities.Marketing.Discounts
 {
 	public class DiscountType:BaseEntity
 	{
-		public Guid SubscriptionId { get; set; }
+        public Guid SubscriptionId { get; set; }
         public string Name { get; set; }
         public string OtherName { get; set; }
         public string Type { get; set; }

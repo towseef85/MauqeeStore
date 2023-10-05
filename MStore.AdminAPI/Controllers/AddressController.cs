@@ -33,11 +33,11 @@ namespace MStore.AdminAPI.Controllers
                 return HandleResult(await Mediator.Send(new Edit.Command { Address = Address }));
             }
 
-            //[HttpDelete("{Id}")]
-            //public async Task<IActionResult> Delete(Guid Id)
-            //{
-             //   return HandleResult(await Mediator.Send(new Delete.Command { Id = Id }));
-           // }
+            [HttpDelete("{Id}")]
+            public async Task<IActionResult> Delete(Guid Id)
+            {
+               return HandleResult(await Mediator.Send(new Delete.Command { Id = Id }));
+            }
 
 
         }

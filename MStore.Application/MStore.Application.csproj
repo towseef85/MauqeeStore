@@ -21,9 +21,13 @@
   <ItemGroup>
     <None Remove="CustomerBL\AddressBL\" />
     <None Remove="Dtos\CustomerDto\AddressDto\" />
+    <None Remove="Dtos\MarketingDto\" />
+    <None Remove="Dtos\MarketingDto\DiscountType\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomerBL\AddressBL\" />
     <Folder Include="Dtos\CustomerDto\AddressDto\" />
+    <Folder Include="Dtos\MarketingDto\" />
+    <Folder Include="Dtos\MarketingDto\DiscountType\" />
   </ItemGroup>
 </Project>
