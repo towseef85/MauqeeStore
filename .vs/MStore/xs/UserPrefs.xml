@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{23343A4B-329F-48A5-8F2B-6F95BF495E34}|Default">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MStore.AdminAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="MStore.Persistence/DependencyInjection.cs">
     <Files>
-      <File FileName="MStore.AdminAPI/Program.cs" Line="85" Column="1" />
-      <File FileName="MStore.Persistence/DependencyInjection.cs" Line="32" Column="1" />
+      <File FileName="MStore.AdminAPI/Program.cs" />
+      <File FileName="MStore.Persistence/DependencyInjection.cs" Line="26" Column="54" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MStore" expanded="True">
-            <Node name="MStore.AdminAPI" expanded="True">
+            <Node name="MStore.AdminAPI">
               <Node name="Controllers" expanded="True" />
             </Node>
             <Node name="MStore.Persistence">
@@ -21,8 +21,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.MStore.AdminAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using MStore.Application.Dtos.CatalogDtos.TaxCategory;
+using MStore.Application.Dtos.FinanceDto.TaxCategoryDto;
 using MStore.Application.Interfaces;
 using MStore.Domain.Financials;
 using MStore.Persistence.Context;

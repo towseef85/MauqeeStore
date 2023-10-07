@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using MStore.Application.Core;
-using MStore.Application.Dtos.CurrencyDto;
+using MStore.Application.Dtos.FinanceDto.CurrencyDto;
 using System;
 using System.Collections.Generic;
 using System.Linq;

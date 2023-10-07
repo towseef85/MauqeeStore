@@ -1,4 +1,4 @@
-﻿using MStore.Application.Dtos.CatalogDtos.TaxCategory;
+﻿using MStore.Application.Dtos.FinanceDto.TaxCategoryDto;
 
 namespace MStore.Application.Interfaces
 {

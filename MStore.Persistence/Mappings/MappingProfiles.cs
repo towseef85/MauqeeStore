@@ -4,7 +4,8 @@ using MStore.Application.Dtos.CatalogDtos.Category;
 using MStore.Application.Dtos.CatalogDtos.Product;
 using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
 using MStore.Application.Dtos.CatalogDtos.ProductAttributeValue;
-using MStore.Application.Dtos.CatalogDtos.TaxCategory;
+using MStore.Application.Dtos.FinanceDto.TaxCategoryDto;
+using MStore.Application.Dtos.FinanceDto.PaymentStatusDto;
 using MStore.Application.Dtos.CMSDtos.Slider;
 using MStore.Application.Dtos.CustomerDto;
 using MStore.Application.Dtos.SubscriptionDtos;
@@ -14,6 +15,14 @@ using MStore.Domain.Entities.CMS.Commons;
 using MStore.Domain.Entities.Customers;
 using MStore.Domain.Entities.Subscriptions;
 using MStore.Domain.Financials;
+using MStore.Domain.Entities.Financials;
+using MStore.Application.Dtos.SalesDto.OrderStatusDto;
+using MStore.Domain.Entities.Sales.Orders;
+using MStore.Application.Dtos.MarketingDto.AffiliateDto;
+using MStore.Domain.Entities.Marketing.Affiliates;
+using MStore.Application.Dtos.MarketingDto.DiscountTypeDto;
+using MStore.Domain.Entities.Marketing.Discounts;
+using MStore.Application.Dtos.MarketingDto.DiscountDto;
 
 namespace MStore.Persistence.Mappings
 {
@@ -48,6 +57,18 @@ namespace MStore.Persistence.Mappings
             CreateMap<PostSliderDto, Slider>();
             CreateMap<PostCustomerDto,Customer>();
             CreateMap<Customer, GetCustomerDto>();
+
+            CreateMap<PostPaymentStatusDto,PaymentStatus>();
+            CreateMap<PaymentStatus, GetPaymentStatusDto>();
+            CreateMap<PostOrderStatusDto,OrderStatus>();
+            CreateMap<OrderStatus, GetOrderStatusDto>();
+            CreateMap<PostAffiliateDto,Affiliate>();
+            CreateMap<Affiliate, GetAffiliateDto>();
+            CreateMap<PostDiscountTypeDto,DiscountType>();
+            CreateMap<DiscountType, GetDiscountTypeDto>();
+            CreateMap<PostDiscountDto,Discount>();
+            CreateMap<Discount, GetDiscountDto>();
+            
 
         }
     }

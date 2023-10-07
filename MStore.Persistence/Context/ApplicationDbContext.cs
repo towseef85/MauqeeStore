@@ -13,6 +13,9 @@ using MStore.Domain.Financials;
 using MStore.Domain.Entities.Financials;
 using MStore.Domain.Entities.Customers;
 using MStore.Domain.Entities.Marketing.Discounts;
+using MStore.Domain.Entities.Marketing.Affiliates;
+using MStore.Domain.Entities.Sales.Orders;
+
 
 namespace MStore.Persistence.Context
 {
@@ -90,6 +93,10 @@ namespace MStore.Persistence.Context
         public DbSet<Address> Addresses { get; set; }
         public DbSet<DiscountType> DiscountTypes { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+        public DbSet<OrderStatus> OrderStatuses { get; set; }
+        //public DbSet<OrderStatus> Orders { get; set; }
+        public DbSet<Affiliate> Affiliates { get; set; }
+        public DbSet<PaymentStatus> PaymentStatuses { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -99,6 +106,8 @@ namespace MStore.Persistence.Context
             modelBuilder.ApplyConfiguration(new ProductAttributeValueEntityConfiguration());
             modelBuilder.ApplyConfiguration(new ProductArributeCombinationEntityConfiguration());
             modelBuilder.ApplyConfiguration(new DiscountEntityConfigration());
+            //modelBuilder.ApplyConfiguration(new AffiliateEntityConfigration());
+            //modelBuilder.ApplyConfiguration(new PaymentStatusEntityConfigration());
 
         }
         public async Task<IDbContextTransaction> BeginTransactionAsync()

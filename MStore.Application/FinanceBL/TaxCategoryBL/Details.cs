@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using MStore.Application.Core;
-using MStore.Application.Dtos.CatalogDtos.TaxCategory;
+using MStore.Application.Dtos.FinanceDto.TaxCategoryDto;
 using MStore.Application.Interfaces;
 using System;
 using System.Collections.Generic;

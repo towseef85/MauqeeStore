@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MStore.Application.Dtos.FinanceDto.TaxCategoryDto;
-using MStore.Application.FinanceBL.TaxCategoryBL;
+using Microsoft.AspNetCore.Mvc;
+using MStore.Application.SalesBL.OrderStatusBL;
+using MStore.Application.Dtos.SalesDto.OrderStatusDto;
 
 namespace MStore.AdminAPI.Controllers
 {
 
-    public class TaxCategoryController : BaseApiController
+    public class OrderStatusController : BaseApiController
     {
         [HttpGet]
         public async Task<IActionResult> GetList()
@@ -13,10 +13,10 @@ namespace MStore.AdminAPI.Controllers
             return HandleResult(await Mediator.Send(new List.Query { SubscriptionId = GetSubscriptionId() }));
         }
         [HttpPost]
-        public async Task<IActionResult> Create(PostTaxCategoryDto TaxCategory)
+        public async Task<IActionResult> Create(PostOrderStatusDto OrderStatus)
         {
-            TaxCategory.SubscriptionId = GetSubscriptionId();
-            return HandleResult(await Mediator.Send(new Create.Command { TaxCategory = TaxCategory }));
+            OrderStatus.SubscriptionId = GetSubscriptionId();
+            return HandleResult(await Mediator.Send(new Create.Command { OrderStatus = OrderStatus }));
         }
 
         [HttpGet("{Id}")]
@@ -26,10 +26,10 @@ namespace MStore.AdminAPI.Controllers
         }
 
         [HttpPut("{Id}")]
-        public async Task<IActionResult> Edit(PostTaxCategoryDto TaxCategory)
+        public async Task<IActionResult> Edit(PostOrderStatusDto OrderStatus)
         {
-            TaxCategory.SubscriptionId = GetSubscriptionId();
-            return HandleResult(await Mediator.Send(new Edit.Command { TaxCategory = TaxCategory }));
+            OrderStatus.SubscriptionId= GetSubscriptionId();
+            return HandleResult(await Mediator.Send(new Edit.Command { OrderStatus = OrderStatus }));
         }
 
         [HttpDelete("{Id}")]
@@ -37,5 +37,7 @@ namespace MStore.AdminAPI.Controllers
         {
             return HandleResult(await Mediator.Send(new Delete.Command { Id = Id }));
         }
+        
+     
     }
 }

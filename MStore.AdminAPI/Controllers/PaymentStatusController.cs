@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MStore.Application.FinanceBL.CurrencyBL;
-using MStore.Application.Dtos.FinanceDto.CurrencyDto;
+using Microsoft.AspNetCore.Mvc;
+using MStore.Application.FinanceBL.PaymentStatusBL;
+using MStore.Application.Dtos.FinanceDto.PaymentStatusDto;
 
 namespace MStore.AdminAPI.Controllers
 {
 
-    public class CurrencyController : BaseApiController
+    public class PaymentStatusController : BaseApiController
     {
         [HttpGet]
         public async Task<IActionResult> GetList()
@@ -13,10 +13,10 @@ namespace MStore.AdminAPI.Controllers
             return HandleResponse(await Mediator.Send(new List.Query { SubscriptionId = GetSubscriptionId() }));
         }
         [HttpPost]
-        public async Task<IActionResult> Create(PostCurrencyDto Currency)
+        public async Task<IActionResult> Create(PostPaymentStatusDto PaymentStatus)
         {
-            Currency.SubscriptionId = GetSubscriptionId();
-            return HandleResponse(await Mediator.Send(new Create.Command { Currency = Currency }));
+            PaymentStatus.SubscriptionId = GetSubscriptionId();
+            return HandleResponse(await Mediator.Send(new Create.Command { PaymentStatus = PaymentStatus }));
         }
 
         [HttpGet("{Id}")]
@@ -26,17 +26,18 @@ namespace MStore.AdminAPI.Controllers
         }
 
         [HttpPut("{Id}")]
-        public async Task<IActionResult> Edit(PostCurrencyDto Currency)
+        public async Task<IActionResult> Edit(PostPaymentStatusDto PaymentStatus)
         {
-            Currency.SubscriptionId = GetSubscriptionId();
-            return HandleResponse(await Mediator.Send(new Edit.Command { Currency = Currency }));
+            PaymentStatus.SubscriptionId= GetSubscriptionId();
+            return HandleResponse(await Mediator.Send(new Edit.Command { PaymentStatus = PaymentStatus }));
         }
 
         [HttpDelete("{Id}")]
         public async Task<IActionResult> Delete(Guid Id)
-
         {
             return HandleResponse(await Mediator.Send(new Delete.Command { Id = Id }));
         }
+        
+     
     }
 }

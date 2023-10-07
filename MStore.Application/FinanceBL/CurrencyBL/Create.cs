@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using MediatR;
 using MStore.Application.Core;
-using MStore.Application.Dtos.CurrencyDto;
+using MStore.Application.Dtos.FinanceDto.CurrencyDto;
 using MStore.Application.FinanceBL.CurrencyBL;
 using MStore.Application.Interfaces;
 using System;

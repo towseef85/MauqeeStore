@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using MStore.Application.Core;
-using MStore.Application.Dtos.CurrencyDto;
+using MStore.Application.Dtos.FinanceDto.CurrencyDto;
 using MStore.Application.Interfaces;
 using MStore.Domain.Entities.CMS.Commons;
 using MStore.Domain.Entities.Financials;
