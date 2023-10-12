@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using MStore.Application.Core;
-using MStore.Application.Dtos.CatalogDtos.Product;
+using MStore.Application.Dtos.CatalogDtos.ProductDto;
 using MStore.Application.Interfaces;
 
 namespace MStore.Application.CatalogBL.ProductBL

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hKyAFMG22JSfL0bL1FxQR+tE9xV7yHwFYZCJXfgMdNkKPSQp/gVN/vJJNOrUVdlwg9D8tvyvPByZvJXMZXQqoQ==",
+  "dgSpecHash": "/euLpwkMdhU4oC/qQJtm91ZdfUly4N6VdnXDvhTHxrXUybuqJAV0s5QqY5eP+81oxSZSH8Xvxwyhwz1R4pOmJA==",
   "success": true,
   "projectFilePath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Domain/MStore.Domain.csproj",
   "expectedPackageFiles": [
@@ -24,9 +24,7 @@
     "/Users/m7mmed/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "/Users/m7mmed/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/m7mmed/.nuget/packages/system.diagnostics.diagnosticsource/6.0.1/system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
+    "/Users/m7mmed/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

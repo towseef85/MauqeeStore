@@ -15,6 +15,7 @@ using MStore.Domain.Entities.Customers;
 using MStore.Domain.Entities.Marketing.Discounts;
 using MStore.Domain.Entities.Marketing.Affiliates;
 using MStore.Domain.Entities.Sales.Orders;
+using MStore.Domain.Entities.Shipping;
 
 
 namespace MStore.Persistence.Context
@@ -80,6 +81,7 @@ namespace MStore.Persistence.Context
         public DbSet<ProductAttribute> ProductAttributes { get; set; }
         public DbSet<ProductAttributeValue> ProductAttributeValues { get; set; }
         public DbSet<ProductAttributeCombination> ProductAttributeCombinations { get; set; }
+        public DbSet<ProductWarehouseInventory> ProductWarehouseInventories { get; set; }
         public DbSet<Navigation> Navigations { get; set; }
         public DbSet<Plans> Plans { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
@@ -93,10 +95,17 @@ namespace MStore.Persistence.Context
         public DbSet<Address> Addresses { get; set; }
         public DbSet<DiscountType> DiscountTypes { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+        public DbSet<Order> Orders { get; set; }
         public DbSet<OrderStatus> OrderStatuses { get; set; }
-        //public DbSet<OrderStatus> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Affiliate> Affiliates { get; set; }
         public DbSet<PaymentStatus> PaymentStatuses { get; set; }
+        public DbSet<Shipment> Shipments { get; set; }
+        public DbSet<DeliveryDate> DeliveryDates { get; set; }
+        public DbSet<ProductAvailabilityRange> ProductAvailabilityRanges { get; set; }
+        public DbSet<Warehouse> Warehouses { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -106,8 +115,12 @@ namespace MStore.Persistence.Context
             modelBuilder.ApplyConfiguration(new ProductAttributeValueEntityConfiguration());
             modelBuilder.ApplyConfiguration(new ProductArributeCombinationEntityConfiguration());
             modelBuilder.ApplyConfiguration(new DiscountEntityConfigration());
-            //modelBuilder.ApplyConfiguration(new AffiliateEntityConfigration());
-            //modelBuilder.ApplyConfiguration(new PaymentStatusEntityConfigration());
+            modelBuilder.ApplyConfiguration(new CustomerAddressEntityConfigration());
+            modelBuilder.ApplyConfiguration(new CustomerOrderEntityConfigration());
+            modelBuilder.ApplyConfiguration(new AffilateEntityConfigration());
+            modelBuilder.ApplyConfiguration(new OrderStatusEntityConfigration());
+            modelBuilder.ApplyConfiguration(new OrderItemEntityConfigration());
+            modelBuilder.ApplyConfiguration(new PayemntStatusEntityConfigration());
 
         }
         public async Task<IDbContextTransaction> BeginTransactionAsync()

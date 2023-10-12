@@ -29,6 +29,8 @@ namespace MStore.Domain.Entities.Catalog.Products
         public virtual Brand Brand { get; set; }
         public Guid? ProductTagId { get; set; }
         public Guid TaxCategoryId { get; set; }
+        public Guid DeliveryDateId { get; set; }
+        public Guid ProductAvailabilityRangeId { get; set; }
         public virtual TaxCategory TaxCategory { get; set; }
         public ICollection<ProductTags>? ProductTags { get; set; }
         public ICollection<ProductAttributeCombination> ProductAttributeCombinations { get; set; }

@@ -22,7 +22,7 @@ namespace MStore.Application.CatalogBL.BrandBL
             {
 
                 var result = await _iBrandRepo.DeleteBrand(request.Id);
-                if (!result) return Result<Unit>.Failure("Failed to update Position");
+                if (!result) return Result<Unit>.Failure("Failed to Delete Brand");
                 return Result<Unit>.Success(Unit.Value);
             }
         }

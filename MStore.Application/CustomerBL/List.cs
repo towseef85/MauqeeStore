@@ -1,7 +1,7 @@
 ﻿using System;
 using MediatR;
 using MStore.Application.Core;
-using MStore.Application.Dtos.CatalogDtos.Brand;
+
 using MStore.Application.Dtos.CustomerDto;
 using MStore.Application.Interfaces;
 

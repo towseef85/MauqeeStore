@@ -1,4 +1,6 @@
 
+using MStore.Domain.Entities.Sales.Orders;
+
 namespace MStore.Domain.Entities.Marketing.Affiliates
 {
     
@@ -23,7 +25,7 @@ namespace MStore.Domain.Entities.Marketing.Affiliates
         public string FriendlyUrlName { get; set; }
         public bool IsActive { get; set; }
         
-        public ICollection<Affiliate>Affiliates { get; set; }
+        public ICollection<Order>Orders { get; set; }
         
     }
 }

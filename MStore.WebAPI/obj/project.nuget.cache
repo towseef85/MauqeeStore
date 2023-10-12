@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LVVfyLthCqHl8j6wUQXLEGdeU77wlR5olB+r2RJiBvFx1VtkDlykmDJ27p25Fi0tSViYVYtfXCqHDjKmUXtPyA==",
+  "dgSpecHash": "+4+kpSPVaVG6vjOVmticMGPRKJ6Sp5X5yGZmptWK3hEPzBDJ9XzPcN0yr+ZfN3J2kfaN4czvkuTZHqq5kDYx6Q==",
   "success": true,
   "projectFilePath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.WebAPI/MStore.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -9,10 +9,7 @@
     "/Users/m7mmed/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/m7mmed/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/Users/m7mmed/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.11/microsoft.netcore.app.host.osx-x64.6.0.11.nupkg.sha512"
+    "/Users/m7mmed/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
   ],
   "logs": []
 }

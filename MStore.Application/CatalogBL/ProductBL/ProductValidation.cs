@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using MStore.Application.Dtos.CatalogDtos.Product;
+using MStore.Application.Dtos.CatalogDtos.ProductDto;
 using System;
 using System.Collections.Generic;
 using System.Linq;

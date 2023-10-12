@@ -1,10 +1,5 @@
 ﻿using FluentValidation;
-using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MStore.Application.Dtos.CatalogDtos.ProductAttributeDto;
 
 namespace MStore.Application.CatalogBL.ProductAttributeBL
 {

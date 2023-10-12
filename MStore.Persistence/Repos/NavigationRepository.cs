@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using MStore.Application.Dtos.CatalogDtos.Category;
+using MStore.Application.Dtos.CatalogDtos.CategoryDto;
 using MStore.Application.Dtos.CMSDtos.Navigations;
 using MStore.Application.Interfaces;
 using MStore.Domain.Entities.Catalog.Common;

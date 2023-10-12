@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using MStore.Application.Dtos.CatalogDtos.Category;
+using MStore.Application.Dtos.CatalogDtos.CategoryDto;
 using MStore.Application.Interfaces;
 using MStore.Domain.Entities.Catalog.Common;
 using MStore.Persistence.Context;
@@ -18,7 +18,7 @@ namespace MStore.Persistence.Repos
         }
         public async Task<bool> AddCategory(PostCategoryDto PostCategoryDto, CancellationToken cancellationToken)
         {
-            if(_context.Categories.Where(x=>x.EngName == PostCategoryDto.EngName || x.OtherName == PostCategoryDto.OtherName && x.SubscriptionId == PostCategoryDto.SubscriptionId).Any()) { return false; }
+            if(_context.Categories.Where(x=>x.Name == PostCategoryDto.Name || x.OtherName == PostCategoryDto.OtherName && x.SubscriptionId == PostCategoryDto.SubscriptionId).Any()) { return false; }
             _context.Categories.Add(_mapper.Map<Category>(PostCategoryDto));
             var result = await _context.SaveChangesAsync(cancellationToken) > 0;
             return result;

@@ -491,11 +491,6 @@ C:/Users/Administrator/Desktop/Mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6
 /Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/MStore.AdminAPI.csproj.CoreCompileInputs.cache
 /Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/MStore.AdminAPI.MvcApplicationPartsAssemblyInfo.cs
 /Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/MStore.AdminAPI.MvcApplicationPartsAssemblyInfo.cache
-/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/staticwebassets/msbuild.MStore.AdminAPI.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/staticwebassets/msbuild.build.MStore.AdminAPI.props
-/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.MStore.AdminAPI.props
-/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.MStore.AdminAPI.props
-/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/staticwebassets.pack.json
 /Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/staticwebassets.build.json
 /Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/staticwebassets.development.json
 /Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.AdminAPI/obj/Debug/net6.0/scopedcss/bundle/MStore.AdminAPI.styles.css

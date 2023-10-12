@@ -11,7 +11,7 @@ namespace MStore.Domain.Entities.Catalog.Common
     public class Category : BaseEntity 
     {
         public Guid SubscriptionId { get; set; }
-        public string EngName { get; set; }
+        public string Name { get; set; }
         public string? OtherName { get; set; }
         public string? MetaKeywords { get; set; }
         public string? MetaDescription { get; set; }

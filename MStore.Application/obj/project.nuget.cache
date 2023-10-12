@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8/01ABlr0E3WIAYNGcj4JMRiq8ivw5gOhsDsgiecmt+Qo1wEalN2oS1veymgnuYJ3QQggZLOpRrVFzDJN+t+4w==",
+  "dgSpecHash": "KlE1oT8RAdkSrrqaJbKGqVd8kEOjt/Iujd0TJ+f7lArBRGjea1PIhc/mgq17d8uaXGwnyjIcblLDT4qWGx6xhQ==",
   "success": true,
   "projectFilePath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Application/MStore.Application.csproj",
   "expectedPackageFiles": [
@@ -31,9 +31,7 @@
     "/Users/m7mmed/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/m7mmed/.nuget/packages/system.diagnostics.diagnosticsource/6.0.1/system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "/Users/m7mmed/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
+    "/Users/m7mmed/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

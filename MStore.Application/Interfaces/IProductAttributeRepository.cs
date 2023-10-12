@@ -1,4 +1,4 @@
-﻿using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
+﻿using MStore.Application.Dtos.CatalogDtos.ProductAttributeDto;
 
 namespace MStore.Application.Interfaces
 {

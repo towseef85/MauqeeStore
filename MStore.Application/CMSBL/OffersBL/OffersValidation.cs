@@ -1,11 +1,5 @@
 ﻿using FluentValidation;
 using MStore.Application.Dtos.CMSDtos.Offers;
-using MStore.Application.Dtos.CMSDtos.Slider;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MStore.Application.CMSBL.OffersBL
 {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using MStore.Application.Dtos.CatalogDtos.Brand;
+using MStore.Application.Dtos.CatalogDtos.BrandDto;
 using MStore.Application.Interfaces;
 using MStore.Domain.Entities.Catalog.Common;
 using MStore.Persistence.Context;

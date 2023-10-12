@@ -1,10 +1,5 @@
 ﻿using FluentValidation;
-using MStore.Application.Dtos.CatalogDtos.Category;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MStore.Application.Dtos.CatalogDtos.CategoryDto;
 
 namespace MStore.Application.CatalogBL.CategoryBL
 {
@@ -12,7 +7,7 @@ namespace MStore.Application.CatalogBL.CategoryBL
     {
         public CategoryValidation()
         {
-            RuleFor(x => x.EngName).NotEmpty();
+            RuleFor(x => x.Name).NotEmpty();
             RuleFor(x => x.OtherName).NotEmpty();
             RuleFor(x => x.SubscriptionId).NotEmpty();
         }

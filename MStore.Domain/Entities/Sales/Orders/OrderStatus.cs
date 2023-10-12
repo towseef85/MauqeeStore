@@ -8,6 +8,7 @@ namespace MStore.Domain.Entities.Sales.Orders
         public string Name { get; set; }
         public string OtherName { get; set; }
         public bool IsActive { get; set; }
+        public ICollection<Order>Orders { get; set; }
         
     }
 }

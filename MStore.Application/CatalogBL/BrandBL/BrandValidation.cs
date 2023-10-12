@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using MStore.Application.Dtos.CatalogDtos.Brand;
+using MStore.Application.Dtos.CatalogDtos.BrandDto;
 
 namespace MStore.Application.CatalogBL.BrandBL
 {

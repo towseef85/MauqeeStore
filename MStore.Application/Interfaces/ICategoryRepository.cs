@@ -1,4 +1,4 @@
-﻿using MStore.Application.Dtos.CatalogDtos.Category;
+﻿using MStore.Application.Dtos.CatalogDtos.CategoryDto;
 
 namespace MStore.Application.Interfaces
 {

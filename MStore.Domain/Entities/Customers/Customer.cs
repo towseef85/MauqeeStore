@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MStore.Domain.Entities.Sales.Orders;
 
 namespace MStore.Domain.Entities.Customers
 {
@@ -64,6 +65,7 @@ namespace MStore.Domain.Entities.Customers
         
         
         public ICollection<Address> Addresses { get; set; }
+        public ICollection<Order>Orders { get; set; }
 
     }
 }

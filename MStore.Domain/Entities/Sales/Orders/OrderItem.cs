@@ -4,6 +4,7 @@ namespace MStore.Domain.Entities.Sales.Orders
      
     public partial class OrderItem : BaseEntity
     {
+        public Guid SubscriptionId { get; set; }
         public Guid OrderItemId { get; set; }
         public Guid OrderId { get; set; }
         public Guid ProductId { get; set; }
@@ -23,6 +24,7 @@ namespace MStore.Domain.Entities.Sales.Orders
         public decimal? ItemWeight { get; set; }
         //public DateTime? RentalStartDateUtc { get; set; }
         //public DateTime? RentalEndDateUtc { get; set; }
+        public virtual Order Orders { get; set; }
     }
 }
 

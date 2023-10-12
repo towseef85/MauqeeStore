@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using MediatR;
 using MStore.Application.Core;
-using MStore.Application.Dtos.CatalogDtos.Brand;
+using MStore.Application.Dtos.CatalogDtos.BrandDto;
 using MStore.Application.Interfaces;
 
 namespace MStore.Application.CatalogBL.BrandBL

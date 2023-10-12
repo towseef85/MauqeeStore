@@ -4,14 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using MStore.Application.Core;
 using MStore.Application.Dtos.FinanceDto.CurrencyDto;
 using MStore.Application.Interfaces;
-using MStore.Domain.Entities.CMS.Commons;
 using MStore.Domain.Entities.Financials;
 using MStore.Persistence.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MStore.Persistence.Repos
 {

@@ -1,0 +1,39 @@
+using FluentValidation;
+using MediatR;
+using MStore.Application.Core;
+using MStore.Application.Dtos.FinanceDto.CountryDto;
+using MStore.Application.FinanceBL.CountryBL;
+using MStore.Application.Interfaces;
+
+namespace MStore.Application.FinanceBL.Country
+{
+    public class Create
+    {
+        public class Command : IRequest<ServiceStatus<Unit>>
+        {
+            public PostCountryDto Country { get; set; }
+        }
+
+        public class CommandValidator : AbstractValidator<Command>
+        {
+            public CommandValidator()
+            {
+                RuleFor(x => x.Country).SetValidator(new CountryValidation());
+            }
+        }
+
+        public class Handler : IRequestHandler<Command, ServiceStatus<Unit>>
+        {
+            private readonly ICountryRepository _iCountryRepo;
+            public Handler(ICountryRepository iCountryRepo)
+            {
+                _iCountryRepo = iCountryRepo;
+            }
+            public async Task<ServiceStatus<Unit>> Handle(Command request, CancellationToken cancellationToken)
+            {
+                var result = await _iCountryRepo.AddCountry(request.Country, cancellationToken);
+                return result;
+            }
+        }
+    }
+}

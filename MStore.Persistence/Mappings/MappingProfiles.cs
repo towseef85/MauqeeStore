@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
-using MStore.Application.Dtos.CatalogDtos.Brand;
-using MStore.Application.Dtos.CatalogDtos.Category;
-using MStore.Application.Dtos.CatalogDtos.Product;
-using MStore.Application.Dtos.CatalogDtos.ProductAttribute;
-using MStore.Application.Dtos.CatalogDtos.ProductAttributeValue;
+using MStore.Application.Dtos.CatalogDtos.BrandDto;
+using MStore.Application.Dtos.CatalogDtos.CategoryDto;
+using MStore.Application.Dtos.CatalogDtos.ProductDto;
+using MStore.Application.Dtos.CatalogDtos.ProductAttributeDto;
+using MStore.Application.Dtos.CatalogDtos.ProductAttributeValueDto;
+using MStore.Application.Dtos.CatalogDtos.ProductWarehouseInventoryDto;
 using MStore.Application.Dtos.FinanceDto.TaxCategoryDto;
 using MStore.Application.Dtos.FinanceDto.PaymentStatusDto;
 using MStore.Application.Dtos.CMSDtos.Slider;
@@ -23,6 +24,15 @@ using MStore.Domain.Entities.Marketing.Affiliates;
 using MStore.Application.Dtos.MarketingDto.DiscountTypeDto;
 using MStore.Domain.Entities.Marketing.Discounts;
 using MStore.Application.Dtos.MarketingDto.DiscountDto;
+using MStore.Application.Dtos.SalesDto.OrderItemDto;
+using MStore.Application.Dtos.SalesDto.OrderDto;
+using MStore.Domain.Entities.Shipping;
+using MStore.Application.Dtos.ShippingDto.DeliveryDateDto;
+using MStore.Application.Dtos.ShippingDto.ProductAvailabilityRangeDto;
+using MStore.Application.Dtos.ShippingDto.ShipmentDto;
+using MStore.Application.Dtos.ShippingDto.WarehouseDto;
+using MStore.Application.Dtos.FinanceDto.CountryDto;
+
 
 namespace MStore.Persistence.Mappings
 {
@@ -32,6 +42,7 @@ namespace MStore.Persistence.Mappings
         {
             CreateMap<PostCategoryDto, Category>();
             CreateMap<Category, GetCategoriesDto>();
+            
             CreateMap<PostPlanDto, Plans>();
             CreateMap<PostSubscriptionDto, Subscription>();
             CreateMap<Subscription, GetSubscriptionDto>()
@@ -49,8 +60,13 @@ namespace MStore.Persistence.Mappings
                 .ForMember(x => x.ProductAttributeValues, y => y.MapFrom(x => x.AttributeValues));
             CreateMap<PostProductAttributeValues, ProductAttributeValue>();
             CreateMap<ProductAttributeValue, GetProductAttributeValueDto>();
+            
             CreateMap<PostProductAttributeCombinationDto, ProductAttributeCombination>();
             CreateMap<ProductAttributeCombination, GetProductAttributeCombinationDto>();
+
+            CreateMap<PostProductWarehouseInventoryDto, ProductWarehouseInventory>();
+            CreateMap<ProductWarehouseInventory, GetProductWarehouseInventoryDto>();
+
             CreateMap<PostTaxCategoryDto,TaxCategory>();
             CreateMap<TaxCategory, GetTaxCategoryDto>();
             CreateMap<Slider, GetSliderDto>();
@@ -60,14 +76,44 @@ namespace MStore.Persistence.Mappings
 
             CreateMap<PostPaymentStatusDto,PaymentStatus>();
             CreateMap<PaymentStatus, GetPaymentStatusDto>();
+
             CreateMap<PostOrderStatusDto,OrderStatus>();
             CreateMap<OrderStatus, GetOrderStatusDto>();
+
+            
+            CreateMap<PostOrderDto,Order>();
+            CreateMap<Order, GetOrderDto>();
+
+            CreateMap<PostOrderItemDto,OrderItem>();
+            CreateMap<OrderItem, GetOrderItemDto>();
+            
             CreateMap<PostAffiliateDto,Affiliate>();
             CreateMap<Affiliate, GetAffiliateDto>();
+            
             CreateMap<PostDiscountTypeDto,DiscountType>();
             CreateMap<DiscountType, GetDiscountTypeDto>();
+            
             CreateMap<PostDiscountDto,Discount>();
             CreateMap<Discount, GetDiscountDto>();
+
+            CreateMap<PostDeliveryDateDto,DeliveryDate>();
+            CreateMap<DeliveryDate, GetDeliveryDateDto>();
+
+            CreateMap<PostProductAvailabilityRangeDto,ProductAvailabilityRange>();
+            CreateMap<ProductAvailabilityRange, GetProductAvailabilityRangeDto>();
+
+            CreateMap<PostShipmentDto,Shipment>();
+            CreateMap<Shipment, GetShipmentDto>();
+
+
+            CreateMap<PostWarehouseDto,Warehouse>();
+            CreateMap<Warehouse, GetWarehouseDto>();
+
+            CreateMap<PostCountryDto,Country>();
+            CreateMap<Country, GetCountryDto>();
+            
+
+            
             
 
         }

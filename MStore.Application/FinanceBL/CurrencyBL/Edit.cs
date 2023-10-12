@@ -3,11 +3,6 @@ using MediatR;
 using MStore.Application.Core;
 using MStore.Application.Dtos.FinanceDto.CurrencyDto;
 using MStore.Application.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MStore.Application.FinanceBL.CurrencyBL
 {

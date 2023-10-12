@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MStore.Application.CatalogBL.BrandBL;
-using MStore.Application.Dtos.CatalogDtos.Brand;
+using MStore.Application.Dtos.CatalogDtos.BrandDto;
 
 namespace MStore.AdminAPI.Controllers
 {

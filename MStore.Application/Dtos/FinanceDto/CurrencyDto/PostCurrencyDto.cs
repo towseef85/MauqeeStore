@@ -11,6 +11,7 @@ namespace MStore.Application.Dtos.FinanceDto.CurrencyDto
         public Guid Id { get; set; } = new Guid();
         public Guid SubscriptionId { get; set; }
         public string Name { get; set; }
+        public string OtherName { get; set; }
         public string Symbol { get; set; }
         public bool IsActive { get; set; }
     }

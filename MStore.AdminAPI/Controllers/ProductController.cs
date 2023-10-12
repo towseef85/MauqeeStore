@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MStore.Application.CatalogBL.ProductBL;
-using MStore.Application.Dtos.CatalogDtos.Product;
+using MStore.Application.Dtos.CatalogDtos.ProductDto;
 
 namespace MStore.AdminAPI.Controllers
 {

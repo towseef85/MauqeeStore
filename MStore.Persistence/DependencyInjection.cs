@@ -24,8 +24,16 @@ namespace MStore.Persistence
             services.AddScoped<IDiscountTypeRepository, DiscountTypeRepository>();
             services.AddScoped<IDiscountRepository, DiscountRepository>();
             services.AddScoped<IOrderStatusRepository, OrderStatusRepository>();
+            services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IAffiliateRepository, AffiliateRepository>();
             services.AddScoped<IPaymentStatusRepository, PaymentStatusRepository>();
+            services.AddScoped<IShipmentRepository, ShipmentRepository>();
+            services.AddScoped<IDeliveryDateRepository, DeliveryDateRepository>();
+            services.AddScoped<IProductAvailabilityRangeRepository, ProductAvailabilityRangeRepository>();
+            services.AddScoped<IWarehouseRepository, WarehouseRepository>();
+            services.AddScoped<IProductWarehouseInventoryRepository, ProductWarehouseInventoryRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<TokenService>();
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
             return services;
