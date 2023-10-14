@@ -50,12 +50,12 @@ namespace MStore.Persistence.Repos
                 if (identityResult.Succeeded)
                 {
 
-                        //var role = new IdentityRole
-                        //{
-                        //    Name = "Subscriber"
-                        //};
+                        var role = new IdentityRole
+                        {
+                            Name = "Subscriber"
+                        };
 
-                        //await _roleManager.CreateAsync(role);
+                        await _roleManager.CreateAsync(role);
                         await _userManager.AddToRoleAsync(user, "Subscriber");
                     return true;
                    

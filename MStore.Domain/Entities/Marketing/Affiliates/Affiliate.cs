@@ -1,4 +1,5 @@
 
+using MStore.Domain.Entities.Customers;
 using MStore.Domain.Entities.Sales.Orders;
 
 namespace MStore.Domain.Entities.Marketing.Affiliates
@@ -7,6 +8,7 @@ namespace MStore.Domain.Entities.Marketing.Affiliates
     public  class Affiliate : BaseEntity
     {   
         public Guid SubscriptionId { get; set; }
+        public Guid CustomerId { get; set; }
         public string Name { get; set; }
         public string OtherName { get; set; }
         public string Email { get; set; }
@@ -25,7 +27,7 @@ namespace MStore.Domain.Entities.Marketing.Affiliates
         public string FriendlyUrlName { get; set; }
         public bool IsActive { get; set; }
         
-        public ICollection<Order>Orders { get; set; }
+        public virtual Customer Customers { get; set; }
         
     }
 }

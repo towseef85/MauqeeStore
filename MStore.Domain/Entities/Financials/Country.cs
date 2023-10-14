@@ -57,6 +57,6 @@ namespace MStore.Domain.Entities.Financials
         //public bool LimitedToStores { get; set; }
         
         //public virtual ICollection<StateProvince> StateProvince { get; set; }
-        public virtual ICollection<City> City { get; set; }
+       // public virtual ICollection<City> City { get; set; }
     }
 }

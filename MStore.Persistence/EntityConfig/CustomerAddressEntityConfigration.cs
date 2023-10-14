@@ -14,6 +14,7 @@ namespace MStore.Persistence.EntityConfig
         public void Configure(EntityTypeBuilder<Address> builder)
         {
             builder.HasOne(x => x.Customer).WithMany(x => x.Addresses).HasForeignKey(x => x.CustomerId);
+           
         }
     }
 }

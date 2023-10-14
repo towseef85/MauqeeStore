@@ -105,10 +105,17 @@ namespace MStore.Persistence.Context
         public DbSet<ProductAvailabilityRange> ProductAvailabilityRanges { get; set; }
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<Country> Countries { get; set; }
-        public DbSet<City>Cities  { get; set; }
+        //public DbSet<City>Cities  { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            foreach (var property in modelBuilder.Model.GetEntityTypes()
+                .SelectMany(t => t.GetProperties())
+                .Where(p => p.ClrType == typeof(decimal) || p.ClrType == typeof(decimal?)))
+            {
+                property.SetColumnType("decimal(18, 6)");
+            }
+
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new ProductEntityConfiguration());
             modelBuilder.ApplyConfiguration(new ProductTagsEntityConfiguration());
@@ -118,7 +125,8 @@ namespace MStore.Persistence.Context
             modelBuilder.ApplyConfiguration(new DiscountEntityConfigration());
             modelBuilder.ApplyConfiguration(new CustomerAddressEntityConfigration());
             modelBuilder.ApplyConfiguration(new CustomerOrderEntityConfigration());
-            modelBuilder.ApplyConfiguration(new AffilateEntityConfigration());
+           modelBuilder.ApplyConfiguration(new AffiliateEnitityConfiguration());
+
             modelBuilder.ApplyConfiguration(new OrderStatusEntityConfigration());
             modelBuilder.ApplyConfiguration(new OrderItemEntityConfigration());
             modelBuilder.ApplyConfiguration(new PayemntStatusEntityConfigration());

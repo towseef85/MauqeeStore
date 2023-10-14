@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Persistence/MStore.Persistence.csproj": {}
+    "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Persistence\\MStore.Persistence.csproj": {}
   },
   "projects": {
-    "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Application/MStore.Application.csproj": {
+    "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Application\\MStore.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Application/MStore.Application.csproj",
+        "projectUniqueName": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Application\\MStore.Application.csproj",
         "projectName": "MStore.Application",
-        "projectPath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Application/MStore.Application.csproj",
-        "packagesPath": "/Users/m7mmed/.nuget/packages/",
-        "outputPath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Application/obj/",
+        "projectPath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Application\\MStore.Application.csproj",
+        "packagesPath": "C:\\Users\\Towseef-PC\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/m7mmed/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Towseef-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Domain/MStore.Domain.csproj": {
-                "projectPath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Domain/MStore.Domain.csproj"
+              "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Domain\\MStore.Domain.csproj": {
+                "projectPath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Domain\\MStore.Domain.csproj"
               }
             }
           }
@@ -65,8 +67,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -78,26 +79,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.414/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Domain/MStore.Domain.csproj": {
+    "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Domain\\MStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Domain/MStore.Domain.csproj",
+        "projectUniqueName": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Domain\\MStore.Domain.csproj",
         "projectName": "MStore.Domain",
-        "projectPath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Domain/MStore.Domain.csproj",
-        "packagesPath": "/Users/m7mmed/.nuget/packages/",
-        "outputPath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Domain/obj/",
+        "projectPath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Domain\\MStore.Domain.csproj",
+        "packagesPath": "C:\\Users\\Towseef-PC\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/m7mmed/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Towseef-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -127,8 +130,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -137,37 +139,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.414/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Persistence/MStore.Persistence.csproj": {
+    "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Persistence\\MStore.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Persistence/MStore.Persistence.csproj",
+        "projectUniqueName": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Persistence\\MStore.Persistence.csproj",
         "projectName": "MStore.Persistence",
-        "projectPath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Persistence/MStore.Persistence.csproj",
-        "packagesPath": "/Users/m7mmed/.nuget/packages/",
-        "outputPath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Persistence/obj/",
+        "projectPath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Persistence\\MStore.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Towseef-PC\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/m7mmed/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Towseef-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Application/MStore.Application.csproj": {
-                "projectPath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Application/MStore.Application.csproj"
+              "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Application\\MStore.Application.csproj": {
+                "projectPath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Application\\MStore.Application.csproj"
               },
-              "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Domain/MStore.Domain.csproj": {
-                "projectPath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.Domain/MStore.Domain.csproj"
+              "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Domain\\MStore.Domain.csproj": {
+                "projectPath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.Domain\\MStore.Domain.csproj"
               }
             }
           }
@@ -211,8 +215,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -221,7 +224,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.414/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

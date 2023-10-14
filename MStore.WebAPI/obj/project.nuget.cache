@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "+4+kpSPVaVG6vjOVmticMGPRKJ6Sp5X5yGZmptWK3hEPzBDJ9XzPcN0yr+ZfN3J2kfaN4czvkuTZHqq5kDYx6Q==",
+  "dgSpecHash": "GYaJKXnTRNIDxNYKkv9xUUGHcqklWvXPcEJnxUf7tdih5VlAiydXaCr4KDwzhCzCaRajtiRm9OVXAMwsXB6Zfg==",
   "success": true,
-  "projectFilePath": "/Users/m7mmed/Desktop/mauqee/MauqeeStore/MStore.WebAPI/MStore.WebAPI.csproj",
+  "projectFilePath": "D:\\Projects_22-23\\MauqeeStore\\Backend\\MauqeeStore\\MStore.WebAPI\\MStore.WebAPI.csproj",
   "expectedPackageFiles": [
-    "/Users/m7mmed/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/m7mmed/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "C:\\Users\\Towseef-PC\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Towseef-PC\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Towseef-PC\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Towseef-PC\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Towseef-PC\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Towseef-PC\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
   ],
   "logs": []
 }

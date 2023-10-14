@@ -19,7 +19,6 @@ namespace MStore.Domain.Entities.Sales.Orders
         public Guid OrderStatusId { get; set; }
         public Guid ShippingStatusId { get; set; }
         public Guid PaymentStatusId { get; set; }
-        public Guid AffiliateId { get; set; }
         //public string CustomerCurrencyCode { get; set; }
         //public decimal CurrencyRate { get; set; }
         
@@ -70,7 +69,6 @@ namespace MStore.Domain.Entities.Sales.Orders
         public bool DisplayToCustomer { get; set; }
 
         public virtual Customer Customer { get; set; }
-        public virtual Affiliate Affiliate { get; set; }
         public virtual OrderStatus OrderStatus { get; set; }
         public virtual PaymentStatus PaymentStatus { get; set; }
         public ICollection<OrderItem>OrderItems { get; set; }
