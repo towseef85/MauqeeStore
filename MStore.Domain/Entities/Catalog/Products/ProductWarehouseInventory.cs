@@ -16,7 +16,7 @@ namespace MStore.Domain.Entities.Catalog.Products
         /// <summary>
         /// Gets or sets the stock quantity
         /// </summary>
-        public int StockQuantity { get; set; }
+        public Decimal StockQuantity { get; set; }
 
         /// <summary>
         /// Gets or sets the reserved quantity (ordered but not shipped yet)

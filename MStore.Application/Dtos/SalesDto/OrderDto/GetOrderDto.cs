@@ -34,7 +34,7 @@ namespace MStore.Application.Dtos.SalesDto.OrderDto
         public decimal PaymentMethodAdditionalFeeExclTax { get; set; }
         public Guid TaxCategoryId { get; set; }
         //public decimal OrderTax { get; set; }
-        public decimal DiscountId { get; set; }
+        public Guid DiscountId { get; set; }
         public decimal OrderNetTotal { get; set; }
         //public decimal RefundedAmount { get; set; }
         //public int? RewardPointsHistoryEntryId { get; set; }

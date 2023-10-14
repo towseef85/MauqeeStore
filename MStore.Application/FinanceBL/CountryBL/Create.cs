@@ -2,10 +2,9 @@ using FluentValidation;
 using MediatR;
 using MStore.Application.Core;
 using MStore.Application.Dtos.FinanceDto.CountryDto;
-using MStore.Application.FinanceBL.CountryBL;
 using MStore.Application.Interfaces;
 
-namespace MStore.Application.FinanceBL.Country
+namespace MStore.Application.FinanceBL.CountryBL
 {
     public class Create
     {

@@ -2,6 +2,7 @@ namespace MStore.Application.Dtos.FinanceDto.CountryDto
 {
     public class GetCountryDto
     {
+        public Guid Id { get; set; }
         public Guid SubscriptionId { get; set; }
         public string Name { get; set; }
         public string OtherName { get; set; }

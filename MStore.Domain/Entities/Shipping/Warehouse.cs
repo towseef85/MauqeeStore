@@ -22,7 +22,7 @@ namespace MStore.Domain.Entities.Shipping
         /// <summary>
         /// Gets or sets the address identifier of the warehouse
         /// </summary>
-        public int AddressId { get; set; }
+        public Guid AddressId { get; set; }
         
     }
 }

@@ -34,6 +34,7 @@ namespace MStore.Persistence
             services.AddScoped<IWarehouseRepository, WarehouseRepository>();
             services.AddScoped<IProductWarehouseInventoryRepository, ProductWarehouseInventoryRepository>();
             services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<ICityRepository, CityRepository>();
             services.AddScoped<TokenService>();
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
             return services;

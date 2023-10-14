@@ -26,22 +26,22 @@ namespace MStore.Domain.Entities.Customers
             /// <summary>
             /// Gets or sets the country identifier
             /// </summary>
-            public int? CountryId { get; set; }
+            public Guid CountryId { get; set; }
 
             /// <summary>
             /// Gets or sets the state/province identifier
             /// </summary>
-            public int? StateProvinceId { get; set; }
+            //public int? StateProvinceId { get; set; }
 
             /// <summary>
             /// Gets or sets the county
             /// </summary>
-            public string County { get; set; }
+            //public string County { get; set; }
 
             /// <summary>
             /// Gets or sets the city
             /// </summary>
-            public string City { get; set; }
+            public Guid CityId { get; set; }
 
             /// <summary>
             /// Gets or sets the address 1
@@ -67,8 +67,9 @@ namespace MStore.Domain.Entities.Customers
             /// Gets or sets the fax number
             /// </summary>
             public string FaxNumber { get; set; }
-             public Guid CustomerId { get; set; }
-        public virtual Customer Customer { get; set; }
+            public Guid CustomerId { get; set; }
+            public virtual Customer Customer { get; set; }
+            
 
 
         }

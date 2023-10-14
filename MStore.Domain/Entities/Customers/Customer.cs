@@ -15,10 +15,28 @@ namespace MStore.Domain.Entities.Customers
         /// </summary>
         public Guid SubscriptionId { get; set; }
 
+        public string Name { get; set; }
         /// <summary>
         /// Gets or sets the email
         /// </summary>
+        
         public string Email { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public int? Gender { get; set; }
+
+        /// <summary>
+        /// 0 Individual Or 1 Company
+        /// </summary>
+        public int CustomerType { get; set; }
+        public int? CommercialRegister { get; set; }
+
+        public int? TaxNumber { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+
+        public Guid CountryId { get; set; }
+        public Guid CityId { get; set; }
 
 
         /// <summary>
@@ -34,7 +52,7 @@ namespace MStore.Domain.Entities.Customers
         /// <summary>
         /// Gets or sets the affiliate identifier
         /// </summary>
-        public int AffiliateId { get; set; }
+        public Guid AffiliateId { get; set; }
 
      
         /// <summary>

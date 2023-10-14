@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MStore.Domain.Entities.Financials
 {
-    public class Country
+    public class Country :BaseEntity
     {
         public Guid SubscriptionId { get; set; }
         public string Name { get; set; }
@@ -57,6 +57,6 @@ namespace MStore.Domain.Entities.Financials
         //public bool LimitedToStores { get; set; }
         
         //public virtual ICollection<StateProvince> StateProvince { get; set; }
-        //public virtual ICollection<Address> Addresses { get; set; }
+        public virtual ICollection<City> City { get; set; }
     }
 }

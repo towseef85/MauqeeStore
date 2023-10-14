@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace MStore.Application.Dtos.ShippingDto.WarehouseDto
 {
     public class PostWarehouseDto
@@ -23,6 +18,6 @@ namespace MStore.Application.Dtos.ShippingDto.WarehouseDto
         /// <summary>
         /// Gets or sets the address identifier of the warehouse
         /// </summary>
-        public int AddressId { get; set; }
+        public Guid AddressId { get; set; }
     }
 }
