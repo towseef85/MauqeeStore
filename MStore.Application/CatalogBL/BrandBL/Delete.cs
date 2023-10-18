@@ -6,11 +6,11 @@ namespace MStore.Application.CatalogBL.BrandBL
 {
     public class Delete
     {
-        public class Command : IRequest<Result<Unit>>
+        public class Command : IRequest<ServiceStatus<Unit>>
         {
             public Guid Id { get; set; }
         }
-        public class Handler : IRequestHandler<Command, Result<Unit>>
+        public class Handler : IRequestHandler<Command, ServiceStatus<Unit>>
         {
             private readonly IBrandRepository _iBrandRepo;
             public Handler(IBrandRepository iBrandRepo)
@@ -18,12 +18,12 @@ namespace MStore.Application.CatalogBL.BrandBL
                 _iBrandRepo = iBrandRepo;
             }
 
-            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<ServiceStatus<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
 
                 var result = await _iBrandRepo.DeleteBrand(request.Id);
-                if (!result) return Result<Unit>.Failure("Failed to Delete Brand");
-                return Result<Unit>.Success(Unit.Value);
+                return result;
+               
             }
         }
     }

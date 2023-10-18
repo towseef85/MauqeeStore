@@ -8,7 +8,7 @@ namespace MStore.Application.CatalogBL.BrandBL
 {
     public class Create
     {
-        public class Command : IRequest<Result<Unit>>
+        public class Command : IRequest<ServiceStatus<Unit>>
         {
             public PostBrandDto Brand { get; set; }
         }
@@ -21,18 +21,19 @@ namespace MStore.Application.CatalogBL.BrandBL
             }
         }
 
-        public class Handler : IRequestHandler<Command, Result<Unit>>
+        public class Handler : IRequestHandler<Command, ServiceStatus<Unit>>
         {
             private readonly IBrandRepository _iBrandRepo;
             public Handler(IBrandRepository iBrandRepo)
             {
                 _iBrandRepo = iBrandRepo;
             }
-            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<ServiceStatus<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var result = await _iBrandRepo.AddBrand(request.Brand, cancellationToken);
-                if (!result) return Result<Unit>.Failure("Unable to add Brand");
-                return Result<Unit>.Success(Unit.Value);
+
+                return result;
+    
             }
         }
     }

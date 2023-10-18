@@ -7,12 +7,12 @@ namespace MStore.Application.CatalogBL.BrandBL
 {
     public class Details
     {
-        public class Query  : IRequest<Result<GetBrandDto>>
+        public class Query  : IRequest<ServiceStatus<GetBrandDto>>
         {
             public Guid Id { get; set; }
         }
 
-        public class Handler : IRequestHandler<Query, Result<GetBrandDto>>
+        public class Handler : IRequestHandler<Query, ServiceStatus<GetBrandDto>>
         {
             private readonly IBrandRepository _iBrandRepo;
             public Handler(IBrandRepository iBrandRepo)
@@ -20,10 +20,10 @@ namespace MStore.Application.CatalogBL.BrandBL
                 _iBrandRepo = iBrandRepo;
             }
 
-            public async Task<Result<GetBrandDto>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<ServiceStatus<GetBrandDto>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var result = await _iBrandRepo.GetBrandById(request.Id);
-                 return Result<GetBrandDto>.Success(result);
+                return result;
 
             }
         }
