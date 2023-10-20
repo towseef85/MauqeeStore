@@ -22,6 +22,17 @@ namespace MStore.Persistence.Repos
         {
             try
             {
+                var hasName = await _context.Brands.Where(x=>x.EngName == PostBrandDto.EngName).AnyAsync();
+                if (hasName)
+                {
+                    return new ServiceStatus<Unit>
+                    {
+                        Code = System.Net.HttpStatusCode.Conflict,
+                        Message = "Brand Name Already Exists",
+                        Object = Unit.Value
+                    };
+                }
+                
                 _context.Brands.Add(_mapper.Map<Brand>(PostBrandDto));
                  await _context.SaveChangesAsync(cancellationToken);
                 return new ServiceStatus<Unit>
