@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MStore.Domain.Entities.Financials
 {
-    public class Store
+    public class Store : BaseEntity
     {
         public Guid SubscriptionId { get; set; }
         public string Name { get; set; }
@@ -40,6 +40,22 @@ namespace MStore.Domain.Entities.Financials
         public string CommercialRegistrationCertificate { get; set; }
         public string BankCertificate  { get; set; }
         public string ActivityLicenseCertificate  { get; set; }
+        public bool CloseStorePermanently  { get; set; }
+        public bool StopReceivingOrders  { get; set; }
+        public bool ShowCountDownToReOpen  { get; set; }
+        public string StoreCloseTitle  { get; set; }
+        public string StoreCloseOtherTitle  { get; set; }
+        public string StoreCloseDesc  { get; set; }
+        public string StoreCloseOtherDesc  { get; set; }
+        public DateTime StoreCloseFrom  { get; set; }
+        public DateTime StoreCloseTo  { get; set; }
+        public bool SendNotificationToCustomerWhenReOpenStore  { get; set; }
+
+
+
+
+
+
         
         
     }

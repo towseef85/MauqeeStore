@@ -16,6 +16,7 @@ using MStore.Domain.Entities.Marketing.Discounts;
 using MStore.Domain.Entities.Marketing.Affiliates;
 using MStore.Domain.Entities.Sales.Orders;
 using MStore.Domain.Entities.Shipping;
+using MStore.Persistence.Repos;
 
 
 namespace MStore.Persistence.Context
@@ -106,7 +107,8 @@ namespace MStore.Persistence.Context
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<City> Cities { get; set; }
-        //public DbSet<City>Cities  { get; set; }
+        public DbSet<TermAndCondition>TermsAndConditions  { get; set; }
+        public DbSet<Store>Stores  { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

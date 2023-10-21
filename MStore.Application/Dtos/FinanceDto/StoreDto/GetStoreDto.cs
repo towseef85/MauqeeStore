@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MStore.Application.Dtos.StoreDto
+namespace MStore.Application.Dtos.FinanceDto.StoreDto
 {
     public class GetStoreDto
     {
@@ -40,5 +35,15 @@ namespace MStore.Application.Dtos.StoreDto
         public string CommercialRegistrationCertificate { get; set; }
         public string BankCertificate  { get; set; }
         public string ActivityLicenseCertificate  { get; set; }
+        public bool CloseStorePermanently  { get; set; }
+        public bool StopReceivingOrders  { get; set; }
+        public bool ShowCountDownToReOpen  { get; set; }
+        public string StoreCloseTitle  { get; set; }
+        public string StoreCloseOtherTitle  { get; set; }
+        public string StoreCloseDesc  { get; set; }
+        public string StoreCloseOtherDesc  { get; set; }
+        public DateTime StoreCloseFrom  { get; set; }
+        public DateTime StoreCloseTo  { get; set; }
+        public bool SendNotificationToCustomerWhenReOpenStore  { get; set; }
     }
 }

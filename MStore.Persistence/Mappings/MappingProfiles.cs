@@ -33,6 +33,9 @@ using MStore.Application.Dtos.ShippingDto.ShipmentDto;
 using MStore.Application.Dtos.ShippingDto.WarehouseDto;
 using MStore.Application.Dtos.FinanceDto.CountryDto;
 using MStore.Application.Dtos.FinanceDto.CityDto;
+using MStore.Application.Dtos.FinanceDto.TermAndConditionDto;
+using MStore.Application.Dtos.FinanceDto.StoreDto;
+using MStore.Persistence.Repos;
 
 
 namespace MStore.Persistence.Mappings
@@ -115,6 +118,12 @@ namespace MStore.Persistence.Mappings
 
             CreateMap<PostCityDto,City>();
             CreateMap<City, GetCityDto>();
+            
+            CreateMap<PostTermAndConditionDto,TermAndCondition>();
+            CreateMap<TermAndCondition, GetTermAndConditionDto>();
+
+            CreateMap<PostStoreDto,Store>();
+            CreateMap<Store, GetStoreDto>();
             
 
             
