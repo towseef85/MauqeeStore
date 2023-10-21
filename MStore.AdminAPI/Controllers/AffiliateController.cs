@@ -17,6 +17,7 @@ namespace MStore.AdminAPI.Controllers
             public async Task<IActionResult> Create(PostAffiliateDto Affiliate)
             {
                 Affiliate.SubscriptionId = GetSubscriptionId();
+                Affiliate.Id= Guid.NewGuid();
                 return HandleResult(await Mediator.Send(new Create.Command { Affiliate = Affiliate }));
             }
 

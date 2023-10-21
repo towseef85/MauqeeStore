@@ -16,6 +16,7 @@ namespace MStore.AdminAPI.Controllers
         public async Task<IActionResult> Create(PostCurrencyDto Currency)
         {
             Currency.SubscriptionId = GetSubscriptionId();
+            Currency.Id= Guid.NewGuid();
             return HandleResponse(await Mediator.Send(new Create.Command { Currency = Currency }));
         }
 

@@ -17,6 +17,7 @@ namespace MStore.AdminAPI.Controllers
             public async Task<IActionResult> Create(PostDiscountTypeDto DiscountType)
             {
                 DiscountType.SubscriptionId = GetSubscriptionId();
+                DiscountType.Id= Guid.NewGuid();
                 return HandleResult(await Mediator.Send(new Create.Command { DiscountType = DiscountType }));
             }
 

@@ -1,7 +1,6 @@
 using System;
 using MStore.Domain.Entities.Customers;
 using MStore.Domain.Entities.Financials;
-using MStore.Domain.Entities.Marketing.Affiliates;
 
 namespace MStore.Domain.Entities.Sales.Orders
 

@@ -16,6 +16,7 @@ namespace MStore.AdminAPI.Controllers
         public async Task<IActionResult> Create(PostTaxCategoryDto TaxCategory)
         {
             TaxCategory.SubscriptionId = GetSubscriptionId();
+            TaxCategory.Id= Guid.NewGuid();
             return HandleResult(await Mediator.Send(new Create.Command { TaxCategory = TaxCategory }));
         }
 

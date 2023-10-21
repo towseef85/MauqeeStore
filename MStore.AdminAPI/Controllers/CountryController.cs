@@ -16,6 +16,7 @@ namespace MStore.AdminAPI.Controllers
         public async Task<IActionResult> Create(PostCountryDto Country)
         {
             Country.SubscriptionId = GetSubscriptionId();
+            Country.Id= Guid.NewGuid();
             return HandleResponse(await Mediator.Send(new Create.Command { Country = Country }));
         }
 

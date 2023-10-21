@@ -17,6 +17,7 @@ namespace MStore.AdminAPI.Controllers
         public async Task<IActionResult> Create(PostSliderDto Slider)
         {
             Slider.SubscriptionId = GetSubscriptionId();
+            Slider.Id= Guid.NewGuid();
             return HandleResponse(await Mediator.Send(new Create.Command { Slider = Slider }));
         }
 

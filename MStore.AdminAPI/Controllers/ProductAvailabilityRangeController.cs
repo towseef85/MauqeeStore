@@ -16,6 +16,7 @@ namespace MStore.AdminAPI.Controllers
         public async Task<IActionResult> Create(PostProductAvailabilityRangeDto ProductAvailabilityRange)
         {
             ProductAvailabilityRange.SubscriptionId = GetSubscriptionId();
+            ProductAvailabilityRange.Id= Guid.NewGuid();
             return HandleResult(await Mediator.Send(new Create.Command { ProductAvailabilityRange = ProductAvailabilityRange }));
         }
 

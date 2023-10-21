@@ -18,6 +18,7 @@ namespace MStore.AdminAPI.Controllers
         public async Task<IActionResult> Create(PostCustomerDto Customer)
         {
             Customer.SubscriptionId = GetSubscriptionId();
+            Customer.Id= Guid.NewGuid();
             return HandleResult(await Mediator.Send(new Create.Command { Customer = Customer }));
         }
 

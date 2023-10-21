@@ -16,6 +16,7 @@ namespace MStore.AdminAPI.Controllers
         public async Task<IActionResult> Create(PostProductWarehouseInventoryDto ProductWarehouseInventory)
         {
             ProductWarehouseInventory.SubscriptionId= GetSubscriptionId();
+            ProductWarehouseInventory.Id= Guid.NewGuid();
             return HandleResult(await Mediator.Send(new Create.Command { ProductWarehouseInventory = ProductWarehouseInventory }));
         }
 

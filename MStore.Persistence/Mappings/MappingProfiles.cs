@@ -32,6 +32,7 @@ using MStore.Application.Dtos.ShippingDto.ProductAvailabilityRangeDto;
 using MStore.Application.Dtos.ShippingDto.ShipmentDto;
 using MStore.Application.Dtos.ShippingDto.WarehouseDto;
 using MStore.Application.Dtos.FinanceDto.CountryDto;
+using MStore.Application.Dtos.FinanceDto.CityDto;
 
 
 namespace MStore.Persistence.Mappings
@@ -112,8 +113,8 @@ namespace MStore.Persistence.Mappings
             CreateMap<PostCountryDto,Country>();
             CreateMap<Country, GetCountryDto>();
 
-            //CreateMap<PostCityDto,City>();
-            //CreateMap<City, GetCityDto>();
+            CreateMap<PostCityDto,City>();
+            CreateMap<City, GetCityDto>();
             
 
             
