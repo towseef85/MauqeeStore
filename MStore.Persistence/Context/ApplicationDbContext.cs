@@ -110,6 +110,7 @@ namespace MStore.Persistence.Context
         public DbSet<TermAndCondition>TermsAndConditions  { get; set; }
         public DbSet<Store>Stores  { get; set; }
         public DbSet<ProductReview>ProductReviews  { get; set; }
+        public DbSet<Faq>Faqs { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

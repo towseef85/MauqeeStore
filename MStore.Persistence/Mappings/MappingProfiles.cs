@@ -37,6 +37,7 @@ using MStore.Application.Dtos.FinanceDto.TermAndConditionDto;
 using MStore.Application.Dtos.FinanceDto.StoreDto;
 using MStore.Persistence.Repos;
 using MStore.Application.Dtos.CatalogDtos.ProductReviewDto;
+using MStore.Application.Dtos.FinanceDto.FaqDto;
 
 
 namespace MStore.Persistence.Mappings
@@ -128,6 +129,9 @@ namespace MStore.Persistence.Mappings
 
             CreateMap<PostProductReviewDto,ProductReview>();
             CreateMap<ProductReview, GetProductReviewDto>();
+
+            CreateMap<PostFaqDto,Faq>();
+            CreateMap<Faq, GetFaqDto>();
             
 
             
