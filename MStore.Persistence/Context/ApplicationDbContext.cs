@@ -109,6 +109,7 @@ namespace MStore.Persistence.Context
         public DbSet<City> Cities { get; set; }
         public DbSet<TermAndCondition>TermsAndConditions  { get; set; }
         public DbSet<Store>Stores  { get; set; }
+        public DbSet<ProductReview>ProductReviews  { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

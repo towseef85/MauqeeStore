@@ -2,7 +2,7 @@ namespace MStore.Application.Dtos.FinanceDto.StoreDto
 {
     public class PostStoreDto
     {   public Guid Id { get; set; }
-       public Guid SubscriptionId { get; set; }
+      public Guid SubscriptionId { get; set; }
         public string Name { get; set; }
         public string OtherName { get; set; }
         public string StoreURL { get; set; }
@@ -45,5 +45,8 @@ namespace MStore.Application.Dtos.FinanceDto.StoreDto
         public DateTime StoreCloseFrom  { get; set; }
         public DateTime StoreCloseTo  { get; set; }
         public bool SendNotificationToCustomerWhenReOpenStore  { get; set; }
+        public bool SignInWithEmail { get ; set;}
+        public bool SendInvoicesViaEmail { get ; set;}
+        public bool AllowProductReviews { get ; set;}
     }
 }

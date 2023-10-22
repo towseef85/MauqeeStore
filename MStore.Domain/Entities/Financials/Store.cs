@@ -50,6 +50,15 @@ namespace MStore.Domain.Entities.Financials
         public DateTime StoreCloseFrom  { get; set; }
         public DateTime StoreCloseTo  { get; set; }
         public bool SendNotificationToCustomerWhenReOpenStore  { get; set; }
+        public bool SignInWithEmail { get ; set;}
+        public bool SendInvoicesViaEmail { get ; set;}
+        public bool AllowProductReviews { get ; set;}
+
+
+        
+
+        
+        
 
 
 
